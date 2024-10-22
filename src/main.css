@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    @apply bg-black1 font-inter text-base font-normal text-white antialiased md:text-lg;
+    --black1: 17 17 17;
+    --black2: 28 28 28;
+    --grey1: 255 255 255;
+    --grey2: 255 255 255;
+    --white: 255 255 255;
+    --background: 276 100% 95%;
+    --foreground: 276 5% 10%;
+    --card: 276 50% 90%;
+    --card-foreground: 276 5% 15%;
+    --popover: 276 100% 95%;
+    --popover-foreground: 276 100% 10%;
+    --primary: 276 45% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 276 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 238 30% 85%;
+    --muted-foreground: 276 5% 35%;
+    --accent: 238 30% 80%;
+    --accent-foreground: 276 5% 15%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 276 5% 90%;
+    --border: 276 30% 50%;
+    --input: 276 30% 26%;
+    --ring: 276 45% 27%;
+    --radius: 0.75rem;
+  }
+  .dark {
+    --background: 276 50% 10%;
+    --foreground: 276 5% 90%;
+    --card: 276 50% 10%;
+    --card-foreground: 276 5% 90%;
+    --popover: 276 50% 5%;
+    --popover-foreground: 276 5% 90%;
+    --primary: 276 45% 27%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 276 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 238 30% 25%;
+    --muted-foreground: 276 5% 60%;
+    --accent: 238 30% 25%;
+    --accent-foreground: 276 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 276 5% 90%;
+    --border: 276 30% 26%;
+    --input: 276 100% 74%;
+    --ring: 276 45% 27%;
+    --radius: 0.75rem;
+  }
+  h1 {
+    @apply text-center text-4xl font-bold uppercase text-white md:text-7xl xl:text-9xl;
+  }
+  h2 {
+    @apply text-2xl font-medium text-white;
+  }
+  h3 {
+    @apply text-base font-normal text-white;
+  }
+  button {
+    @apply font-inter text-lg font-medium text-white;
+  }
+  span {
+    @apply text-center text-4xl font-bold text-white md:text-6xl xl:text-7xl;
+  }
+}
+
+@layer components {
+  .alt-style {
+    @apply text-center text-base font-normal text-white;
+  }
+  .nav-link {
+    @apply alt-style rounded-[100px] border border-white px-3.5 py-2 hover:bg-white hover:text-black1;
+  }
+}
