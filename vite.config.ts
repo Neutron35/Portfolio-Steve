@@ -11,8 +11,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  build: {
-    emptyOutDir: true,
-    outDir: '../frontend-new-deploy/',
-  },
 });
