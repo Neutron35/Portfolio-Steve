@@ -76,5 +76,9 @@
   }
   .nav-link {
     @apply alt-style rounded-[100px] border border-white px-3.5 py-2 hover:bg-white hover:text-black1;
+
+    &.active {
+      @apply bg-white text-black1;
+    }
   }
 }
