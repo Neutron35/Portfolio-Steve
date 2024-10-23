@@ -13,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Router>
       <ThemeProvider>
-        <div className="flex min-h-screen max-w-[1279px] flex-col items-center px-7 xl:mx-auto">
+        <div className="flex min-h-screen max-w-[1279px] flex-col items-center px-4 md:px-7 xl:mx-auto">
           <Header />
           <main className="flex w-full flex-col items-center gap-24 pb-24">
             <Routes>
