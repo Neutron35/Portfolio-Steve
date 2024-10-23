@@ -8,7 +8,7 @@ import { useState } from 'react';
 function Home() {
   const [hover, setHover] = useState(false);
   return (
-    <div className="w-full pt-9 md:pt-16">
+    <section className="w-full pt-9 md:pt-16">
       <img
         src={imgSteve}
         className="absolute inset-x-0 -z-10 m-auto w-[240px] overflow-hidden rounded-[16px] md:w-[360px]"
@@ -34,7 +34,7 @@ function Home() {
           </Button>
         </NavLink>
       </div>
-    </div>
+    </section>
   );
 }
 
