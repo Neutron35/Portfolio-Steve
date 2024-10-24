@@ -1,6 +1,7 @@
 import Bluel from '@/assets/Bluel.png';
 import Booki from '@/assets/Booki.png';
 import Carducci from '@/assets/Carducci.png';
+import Kasa from '@/assets/Kasa.png';
 import MVC from '@/assets/MVC.png';
 import Qwenta from '@/assets/Qwenta.png';
 
@@ -31,7 +32,7 @@ export const galleryData = {
     {
       title: 'Kasa',
       tags: ['React', 'React Router', 'Animations CSS', 'SASS'],
-      image: '',
+      image: Kasa,
     },
     {
       title: 'Mon Vieux Grimoire',
