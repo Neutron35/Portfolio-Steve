@@ -16,7 +16,7 @@ export const galleryData = {
   content: [
     {
       title: 'Booki',
-      tags: ['HTML', 'CSS', 'Git', 'Github'],
+      tags: ['HTML', 'CSS'],
       image: Booki,
     },
     {
@@ -26,12 +26,12 @@ export const galleryData = {
     },
     {
       title: 'Nina Carducci',
-      tags: ['Optimisation des performances', 'Débug', 'Cahier de recette'],
+      tags: ['Optimisation', 'Débug'],
       image: Carducci,
     },
     {
       title: 'Kasa',
-      tags: ['React', 'React Router', 'Animations CSS', 'SASS'],
+      tags: ['React', 'SASS'],
       image: Kasa,
     },
     {
@@ -41,7 +41,7 @@ export const galleryData = {
     },
     {
       title: 'Qwenta',
-      tags: ['Gestion de projet', 'Notion', 'Kanban', 'Feedly', 'Spécifications techniques'],
+      tags: ['Scrum', 'Notion', 'Kanban'],
       image: Qwenta,
     },
   ],
