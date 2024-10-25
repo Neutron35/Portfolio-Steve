@@ -1,12 +1,7 @@
-import { Button } from '@/components/ui/button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { NavLink } from 'react-router-dom';
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import Linkarrow from '@/components/linkarrow';
 import imgSteve from '@/assets/photo-steve.png';
-import { useState } from 'react';
 
 function Home() {
-  const [hover, setHover] = useState(false);
   return (
     <section className="w-full pt-9 md:pt-16">
       <img
@@ -25,16 +20,7 @@ function Home() {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus leo in orci volutpat sodales.
           Vestibulum accumsan enim at vehicula feugiat.
         </p>
-        <NavLink to="/about">
-          <Button
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
-            className="gap-1.5 bg-transparent underline underline-offset-8 hover:bg-transparent hover:no-underline"
-          >
-            En savoir en plus
-            <FontAwesomeIcon icon={faArrowRight} className={`transition-transform ${hover && 'rotate-[-30deg]'}`} />
-          </Button>
-        </NavLink>
+        <Linkarrow linkto="/about" text="En savoir plus" />
       </div>
     </section>
   );
