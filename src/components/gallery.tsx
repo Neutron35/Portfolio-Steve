@@ -1,4 +1,4 @@
-import Card from '../Card';
+import Card from './card';
 import { galleryType } from '@/types/gallery.types';
 
 function Gallery({ title, content }: galleryType) {

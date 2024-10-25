@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import imgSteve from '../../assets/photo-steve.png';
+import imgSteve from '@/assets/photo-steve.png';
 import { useState } from 'react';
 
 function Home() {

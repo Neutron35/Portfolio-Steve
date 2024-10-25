@@ -15,6 +15,7 @@ env.ts
 .million/*
 *.tsbuildinfo
 biome.json
+vite.config.ts.*
 
 # Editor directories and files
 .vscode/*

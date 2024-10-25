@@ -1,9 +1,9 @@
-import { PopoverAnchor, PopoverContent, PopoverTrigger } from '../ui/popover';
+import { PopoverAnchor, PopoverContent, PopoverTrigger } from './ui/popover';
 import { useEffect, useState } from 'react';
 
-import { Button } from '../ui/button';
+import { Button } from './ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import NavLinks from '../NavLinks';
+import NavLinks from './navlinks';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 import { navbarType } from '@/types/navbar.types';

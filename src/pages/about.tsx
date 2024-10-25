@@ -1,7 +1,7 @@
 import { bannerData, sectionsData } from '@/data/aboutData';
 
-import Banner from '@/components/Banner';
-import Section from '@/components/Section';
+import Banner from '@/components/banner';
+import Section from '@/components/section';
 
 function About() {
   const { title: bannerTitle, content: bannerContent } = bannerData;

@@ -1,9 +1,9 @@
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '../ui/navigation-menu';
+import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from './ui/navigation-menu';
 import { useEffect, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
-import Navbar from '../Navbar';
-import { Popover } from '../ui/popover';
+import Navbar from './navbar';
+import { Popover } from './ui/popover';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 import useScreenSize from '@/hooks/useScreenSize';
 

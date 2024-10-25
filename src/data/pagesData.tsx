@@ -1,8 +1,8 @@
-import About from '@/pages/About';
-import Home from '@/pages/Home';
+import About from '@/pages/about';
+import Home from '@/pages/home';
 import { Navigate } from 'react-router-dom';
-import NotFound from '@/pages/NotFound';
-import Projects from '@/pages/Projects';
+import NotFound from '@/pages/notfound';
+import Projects from '@/pages/projects';
 import { routerType } from '@/types/router.types';
 
 const pagesData: routerType[] = [
