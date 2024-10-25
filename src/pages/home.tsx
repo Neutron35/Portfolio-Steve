@@ -32,7 +32,7 @@ function Home() {
             className="gap-1.5 bg-transparent underline underline-offset-8 hover:bg-transparent hover:no-underline"
           >
             En savoir en plus
-            <FontAwesomeIcon icon={faArrowRight} className={`transition-transform ${hover && 'rotate-[-20deg]'}`} />
+            <FontAwesomeIcon icon={faArrowRight} className={`transition-transform ${hover && 'rotate-[-30deg]'}`} />
           </Button>
         </NavLink>
       </div>
