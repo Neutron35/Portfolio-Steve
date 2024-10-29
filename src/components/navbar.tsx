@@ -36,11 +36,11 @@ function Navbar({ visible }: navbarType) {
             visible ? 'translate-y-0' : 'translate-y-[-200px]'
           }`}
         >
-          <NavLinks forPopover={true} />
+          <NavLinks position="popover" />
         </PopoverContent>
 
         <div className="hidden gap-1 md:flex">
-          <NavLinks forPopover={false} />
+          <NavLinks position="top" />
         </div>
       </PopoverAnchor>
     </div>
