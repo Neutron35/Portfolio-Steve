@@ -32,11 +32,11 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
       )}
       {allowNav ? (
         <div className="flex w-full items-center justify-between px-7">
-          <NavLink to={`/project/${prevProject}`} className="text-3xl">
+          <NavLink to={`/project/${prevProject}`} className="text-xl md:text-4xl xl:text-6xl">
             <FontAwesomeIcon icon={faArrowLeft} />
           </NavLink>
           <h1>{title}</h1>
-          <NavLink to={`/project/${nextProject}`} className="text-3xl">
+          <NavLink to={`/project/${nextProject}`} className="text-xl md:text-4xl xl:text-6xl">
             <FontAwesomeIcon icon={faArrowRight} />
           </NavLink>
         </div>
