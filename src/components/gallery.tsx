@@ -7,7 +7,7 @@ function Gallery({ title, content }: galleryType) {
       <h3 className="size-fit rounded-[100px] border-t border-grey1 bg-black2 px-7 py-2">{title}</h3>
       <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
         {content.map((item) => (
-          <Card key={item.title} content={item} />
+          <Card key={item.id} content={item} />
         ))}
       </div>
     </section>
