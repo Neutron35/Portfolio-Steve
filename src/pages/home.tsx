@@ -1,5 +1,5 @@
 import Linkarrow from '@/components/linkarrow';
-import imgSteve from '@/assets/photo-steve.png';
+import imgSteve from '@/assets/photo-steve.webp';
 
 function Home() {
   return (
