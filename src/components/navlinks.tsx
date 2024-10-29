@@ -4,7 +4,7 @@ import { navLinksType } from '@/types/navlinks.types';
 import pagesData from '@/data/pagesData';
 
 function NavLinks({ forPopover }: navLinksType) {
-  const filteredPagesData = pagesData.filter((page) => page.path !== 'notfound' && page.path !== '*');
+  const filteredPagesData = pagesData.slice(0, pagesData.length - 3);
   let divClassName = '';
   if (!forPopover) {
     divClassName = 'hidden gap-1 md:flex';
