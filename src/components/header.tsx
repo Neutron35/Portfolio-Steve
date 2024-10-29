@@ -48,7 +48,9 @@ function Header() {
         <Popover open={isOpen} onOpenChange={setIsOpen}>
           <NavigationMenuList className="justify-between rounded-[100px] border-t border-t-grey1 bg-black2 px-7 py-3.5">
             <NavigationMenuItem className="py-2">
-              <NavLink to="/">LIEURON</NavLink>
+              <NavLink to="/" className="font-bold">
+                LIEURON
+              </NavLink>
             </NavigationMenuItem>
             <Navbar visible={visible} />
           </NavigationMenuList>
