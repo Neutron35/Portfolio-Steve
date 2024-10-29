@@ -4,6 +4,7 @@ import { Navigate } from 'react-router-dom';
 import NotFound from '@/pages/notfound';
 import Projects from '@/pages/projects';
 import { routerType } from '@/types/router.types';
+import Project from '@/pages/project.tsx';
 
 const pagesData: routerType[] = [
   {
@@ -20,6 +21,11 @@ const pagesData: routerType[] = [
     path: 'projects',
     element: <Projects />,
     title: 'Projets',
+  },
+  {
+    path: 'project/:projectId',
+    element: <Project />,
+    title: 'Projet',
   },
   {
     path: 'notfound',
