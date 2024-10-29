@@ -1,9 +1,9 @@
-import Bluel from '@/assets/Bluel.webp';
-import Booki from '@/assets/Booki.webp';
-import Carducci from '@/assets/Carducci.webp';
-import Kasa from '@/assets/Kasa.webp';
-import MVG from '@/assets/MVG.webp';
-import Qwenta from '@/assets/Qwenta.webp';
+import Bluel from '@/assets/images/Bluel.webp';
+import Booki from '@/assets/images/Booki.webp';
+import Carducci from '@/assets/images/Carducci.webp';
+import Kasa from '@/assets/images/Kasa.webp';
+import MVG from '@/assets/images/MVG.webp';
+import Qwenta from '@/assets/images/Qwenta.webp';
 
 export const bannerData = {
   title: 'Mes projets',
