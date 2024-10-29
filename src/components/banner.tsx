@@ -10,9 +10,15 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
   const { projectId } = useParams();
   const numericProjectId = projectId ? parseInt(projectId, 10) : undefined;
 
-  const nextProject = numericProjectId === projectsData.length - 1 ? 0 : numericProjectId + 1;
+  const nextProject =
+    numericProjectId !== undefined ? (numericProjectId === projectsData.length - 1 ? 0 : numericProjectId + 1) : 0;
 
-  const prevProject = numericProjectId === 0 ? projectsData.length - 1 : numericProjectId - 1;
+  const prevProject =
+    numericProjectId !== undefined
+      ? numericProjectId === 0
+        ? projectsData.length - 1
+        : numericProjectId - 1
+      : projectsData.length - 1;
 
   return (
     <section className="flex w-full flex-col items-center gap-5 pt-9 md:pt-24">
