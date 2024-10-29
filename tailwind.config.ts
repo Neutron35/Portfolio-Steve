@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 import animatedPlugin from 'tailwindcss-animated';
-import intersetPlugin from 'tailwindcss-intersect';
+import intersectPlugin from 'tailwindcss-intersect';
 
 const config = {
   darkMode: ['class'],
@@ -76,7 +76,7 @@ const config = {
       },
     },
   },
-  plugins: [animatedPlugin, intersetPlugin],
+  plugins: [animatedPlugin, intersectPlugin],
 } satisfies Config;
 
 export default config;
