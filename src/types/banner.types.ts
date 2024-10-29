@@ -3,4 +3,5 @@ export interface bannerType {
   content: string;
   tag?: string;
   link?: string;
+  allowNav?: boolean;
 }
