@@ -10,3 +10,7 @@ export interface cardType {
   githubLink?: string;
   previewLink?: string;
 }
+
+export interface CardProps {
+  content: cardType;
+}
