@@ -1,9 +1,10 @@
 import { faCss3, faGit, faGithub, faHtml5, faJs, faNodeJs, faReact, faSass } from '@fortawesome/free-brands-svg-icons';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { SkillContent } from '@/types/skills.types.ts';
 
 // Mapping des noms d'icônes aux icônes FontAwesome
-const iconMapping = {
+export const iconMapping = {
   faHtml5: faHtml5,
   faCss3: faCss3,
   faJs: faJs,
@@ -14,7 +15,7 @@ const iconMapping = {
   faGithub: faGithub,
 };
 
-function Skill({ content }) {
+function Skills({ content }: { content: SkillContent[] }) {
   return (
     <div className="grid w-fit grid-cols-1 gap-9 xl:grid-cols-2 xl:items-stretch xl:justify-around">
       {content.map((skill, index) => (
@@ -32,7 +33,7 @@ function Skill({ content }) {
               ))}
             </ul>
           </CardContent>
-          <CardFooter className="mt-auto flex justify-center gap-1">
+          <CardFooter className="mt-auto flex justify-center gap-4">
             {skill.logos.map((logo, logoIndex) => (
               <FontAwesomeIcon key={logoIndex} icon={iconMapping[logo]} className="text-3xl text-white" />
             ))}
@@ -43,4 +44,4 @@ function Skill({ content }) {
   );
 }
 
-export default Skill;
+export default Skills;

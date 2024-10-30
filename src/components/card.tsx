@@ -1,14 +1,10 @@
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { cardType } from '@/types/card.types'; // Un type pour un item unique de la galerie
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-
-interface CardProps {
-  content: cardType; // Le type exact pour un item
-}
+import { CardProps } from '@/types/card.types.ts';
 
 function Card({ content }: CardProps) {
   const [hover, setHover] = useState(false);
@@ -47,7 +43,6 @@ function Card({ content }: CardProps) {
         </div>
       </article>
     </NavLink>
-
   );
 }
 
