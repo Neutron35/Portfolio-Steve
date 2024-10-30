@@ -1,8 +1,10 @@
+import { SectionType } from '@/types/section.types.ts';
+
 export const bannerData = {
   title: 'Mon profil',
 };
 
-export const experienceData = {
+export const experienceData: SectionType = {
   id: 'experience',
   title: 'Parcours',
   content: [
@@ -31,7 +33,7 @@ export const experienceData = {
   ],
 };
 
-export const skillsData = {
+export const skillsData: SectionType = {
   id: 'skills',
   title: 'Compétences',
   content: [
@@ -92,4 +94,4 @@ export const skillsData = {
   ],
 };
 
-export const sectionsData = [experienceData, skillsData];
+export const sectionsData: SectionType[] = [experienceData, skillsData];
