@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CardProps } from '@/types/card.types.ts';
 
-function Card({ content }: CardProps) {
+function ProjectCard({ content }: CardProps) {
   const [hover, setHover] = useState(false);
   const { id, title, tags, image } = content;
 
@@ -46,4 +46,4 @@ function Card({ content }: CardProps) {
   );
 }
 
-export default Card;
+export default ProjectCard;
