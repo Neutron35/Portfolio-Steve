@@ -1,4 +1,6 @@
 import Bluel from '@/assets/images/Bluel.webp';
+import Booki from '@/assets/images/Booki.webp';
+import Carducci from '@/assets/images/Carducci.webp';
 import Kasa from '@/assets/images/Kasa.webp';
 import MVG from '@/assets/images/MVG.webp';
 import Qwenta from '@/assets/images/Qwenta.webp';
@@ -14,6 +16,7 @@ export const projectsData = [
     id: 0,
     title: 'Booki',
     tags: ['HTML', 'CSS'],
+    image: Booki,
     context: `Site Internet d'une agence de voyage, permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.`,
     role: `Développeur Web`,
     date: `03.2024 - 04.2024`,
@@ -59,6 +62,7 @@ export const projectsData = [
     id: 2,
     title: 'Nina Carducci',
     tags: ['Optimisation', 'Débug'],
+    image: Carducci,
     context: `Débogage et optimisation d'un site de photographe`,
     role: `Développeur Web`,
     date: `06.2024`,
