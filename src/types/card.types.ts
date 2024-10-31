@@ -2,8 +2,10 @@ export interface cardType {
   id: number;
   title: string;
   tags: string[];
-  image: string;
+  image?: string;
   context: string;
+  role: string;
+  date: string;
   description: string;
   issues: string;
   skills: string[];

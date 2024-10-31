@@ -242,11 +242,15 @@
 
 @layer components {
     .alt-style {
-        @apply text-center text-base font-normal text-white;
+        @apply text-center text-sm font-normal text-white;
+    }
+
+    .tag {
+        @apply rounded-[100px] border border-white px-3.5 py-2
     }
 
     .nav-link {
-        @apply alt-style rounded-[100px] border border-white px-3.5 py-2 hover:bg-white hover:text-black1;
+        @apply alt-style tag hover:bg-white hover:text-black1;
 
         &.active {
             @apply bg-white text-black1;

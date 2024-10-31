@@ -6,6 +6,8 @@ export interface galleryType {
     tags: string[];
     image: string;
     context: string;
+    role: string;
+    date: string;
     description: string;
     issues: string;
     skills: string[];
