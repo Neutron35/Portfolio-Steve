@@ -12,7 +12,6 @@ export const experienceData: SectionType = {
       title: `Formation Développeur Web`,
       description: `Openclassrooms - 03.2024 / 11.2024`,
       projectsList: [
-        `Démarrez votre formation de Développeur Web`,
         `Créez la page d'accueil d'une agence de voyage avec HTML & CSS`,
         `Créez une page web dynamique avec JavaScript`,
         `Débuggez et optimisez un site de photographe`,
@@ -25,10 +24,7 @@ export const experienceData: SectionType = {
     {
       title: `Prep'Apprentissage Développeur Web`,
       description: `Openclassrooms - 04.2022 / 08.2022`,
-      projectsList: [
-        `Prenez en main votre formation de développeur web`,
-        `Créez la page d'accueil d'une agence de voyage avec HTML & CSS`,
-      ],
+      projectsList: [`Créez la page d'accueil d'une agence de voyage avec HTML & CSS`],
     },
   ],
 };
