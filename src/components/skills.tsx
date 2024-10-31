@@ -27,7 +27,7 @@ function Skills({ content }: { content: SkillContent[] }) {
             <CardTitle className="text-lg">{skill.title}</CardTitle>
           </CardHeader>
           <CardContent className="mx-auto w-full text-sm text-white md:w-3/5 xl:w-fit">
-            <ul className="flex flex-col gap-2">
+            <ul className="flex list-inside list-disc flex-col gap-2">
               {skill.text.map((sentence, sentenceIndex) => (
                 <li key={sentenceIndex}>{sentence}</li>
               ))}
