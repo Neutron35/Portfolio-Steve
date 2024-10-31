@@ -8,7 +8,7 @@ import Qwenta from '@/assets/images/Qwenta.webp';
 export const bannerData = {
   title: 'Mes projets',
   content:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus leo in orci volutpat sodales.Vestibulum accumsan enim at vehicula feugiat.',
+    'Explorez mon portfolio varié, présentant des solutions numériques raffinées, conçues pour répondre aux besoins de clients de secteurs divers.',
 };
 
 export const projectsData = [
