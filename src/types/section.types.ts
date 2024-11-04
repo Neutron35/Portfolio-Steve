@@ -1,20 +1,23 @@
-// types/section.types.ts
-
 export type ExperienceContent = {
   title: string;
   description: string;
   projectsList: string[];
 };
 
-export type SkillLogo = 'faHtml5' | 'faCss3' | 'faJs' | 'faReact' | 'faSass' | 'faNodeJs' | 'faGit' | 'faGithub';
-
-export type SkillsContent = {
+export type SkillLogo = {
+  name: 'faHtml5' | 'faCss3' | 'faJs' | 'faReact' | 'faSass' | 'faNodeJs' | 'faGit' | 'faGithub';
   title: string;
-  text: string[];
-  logos: SkillLogo[]; // Changez ici pour utiliser SkillLogo[]
+  color: string;
 };
 
-// Vous pouvez également définir SectionType ici si ce n'est pas déjà fait.
+export type SkillContent = {
+  title: string;
+  text: string[];
+  logos: SkillLogo[];
+};
+
+export type SkillsContent = SkillContent;
+
 export type SectionType =
   | {
       id: 'experience';

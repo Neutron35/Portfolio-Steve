@@ -39,7 +39,18 @@ export const skillsData: SectionType = {
         `Intégration de contenu respectant les maquettes et directives du projet en utilisant HTML et CSS.`,
         `Création d'interfaces responsives et interactives optimisées pour différents appareils.`,
       ],
-      logos: ['faHtml5', 'faCss3'],
+      logos: [
+        {
+          name: 'faHtml5',
+          title: 'HTML5',
+          color: '#E44D26',
+        },
+        {
+          name: 'faCss3',
+          title: 'CSS3',
+          color: '#264DE4',
+        },
+      ],
     },
     {
       title: `Gestion de projets et collaboration`,
@@ -57,7 +68,13 @@ export const skillsData: SectionType = {
         `Collecte de données via des formulaires en JavaScript.`,
         `Familiarité avec les opérations asynchrones et gestion d'état côté front.`,
       ],
-      logos: ['faJs'],
+      logos: [
+        {
+          name: 'faJs',
+          title: 'JavaScript',
+          color: '#F7DF1E',
+        },
+      ],
     },
     {
       title: `Développement d'applications avec React`,
@@ -66,7 +83,18 @@ export const skillsData: SectionType = {
         `Gestion de la navigation avec React Router.`,
         `Implémentation de hooks personnalisés.`,
       ],
-      logos: ['faReact', 'faSass'],
+      logos: [
+        {
+          name: 'faReact',
+          title: 'React',
+          color: '#61DAFB',
+        },
+        {
+          name: 'faSass',
+          title: 'Sass',
+          color: '#CC6699',
+        },
+      ],
     },
     {
       title: `Back-end et gestion de données`,
@@ -76,7 +104,13 @@ export const skillsData: SectionType = {
         `Sécurisation des accès pour garantir la confidentialité et l’intégrité des informations.`,
         `Connaissance des principes d'architecture REST et d'API pour permettre des interactions efficaces entre le front-end et le back-end.`,
       ],
-      logos: ['faNodeJs'],
+      logos: [
+        {
+          name: 'faNodeJs',
+          title: 'Node.js',
+          color: '#339933',
+        },
+      ],
     },
     {
       title: `Outils et workflows de développement`,
@@ -85,7 +119,18 @@ export const skillsData: SectionType = {
         `Configuration d'environnements de développement front-end.`,
         `Maîtrise des DevTools de Chrome pour le débogage et l’optimisation de performance.`,
       ],
-      logos: ['faGit', 'faGithub'],
+      logos: [
+        {
+          name: 'faGit',
+          title: 'Git',
+          color: '#F1502F',
+        },
+        {
+          name: 'faGithub',
+          title: 'GitHub',
+          color: '#2DBA4E',
+        },
+      ],
     },
   ],
 };

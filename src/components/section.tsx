@@ -1,16 +1,14 @@
 import Timeline from '@/components/timeline.tsx';
-import Skill from '@/components/skills.tsx';
+import Skills from '@/components/skills.tsx';
 import { ExperienceContent, SectionType, SkillsContent } from '@/types/section.types.ts';
 
 function Section({ section }: { section: SectionType }) {
   let content = <></>;
 
   if (section.id === 'experience' && section.content.every((item) => 'description' in item)) {
-    // Cast as ExperienceContent[] for Timeline
     content = <Timeline content={section.content as ExperienceContent[]} />;
   } else if (section.id === 'skills' && section.content.every((item) => 'text' in item)) {
-    // Cast as SkillsContent[] for Skill
-    content = <Skill content={section.content as SkillsContent[]} />;
+    content = <Skills content={section.content as SkillsContent[]} />;
   }
 
   return (
