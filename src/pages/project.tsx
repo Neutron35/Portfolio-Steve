@@ -27,7 +27,7 @@ function Project() {
       projectData;
 
     return (
-      <div className="flex flex-col gap-24">
+      <div className="flex flex-col gap-14 md:gap-24">
         <Banner title={title} content={context} allowNav={true} />
         <section className="flex flex-col gap-16">
           <div className="h-[400px] w-full overflow-hidden rounded-[24px] md:h-[500px] xl:h-[800px]">
