@@ -1,17 +1,6 @@
-export interface galleryType {
+import { ProjectBase } from './shared.types.ts';
+
+export interface GalleryType {
   title: string;
-  content: {
-    id: number;
-    title: string;
-    tags: string[];
-    image: string;
-    context: string;
-    role: string;
-    date: string;
-    description: string;
-    issues: string;
-    skills: string[];
-    githubLink?: string;
-    previewLink?: string;
-  }[];
+  content: ProjectBase[];
 }
