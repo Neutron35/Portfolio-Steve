@@ -20,7 +20,7 @@ function Skills({ content }: { content: SkillContent[] }) {
 
   return (
     <div className="flex flex-col gap-9">
-      <div className="mx-auto flex w-fit gap-4 rounded-[24px] border-t bg-black2 p-8">
+      <div className="mx-auto flex w-full flex-wrap justify-center gap-4 rounded-[24px] border-t bg-black2 p-8">
         {content
           .flatMap((skill) => skill.logos)
           .map((logo, index) => (
@@ -32,9 +32,9 @@ function Skills({ content }: { content: SkillContent[] }) {
             >
               <FontAwesomeIcon
                 icon={iconMapping[logo.name].icon}
-                className={`text-5xl text-white transition-colors ${hoveredLogo === logo.name ? iconMapping[logo.name].color : ''}`}
+                className={`text-4xl text-white transition-colors xl:text-5xl ${hoveredLogo === logo.name ? iconMapping[logo.name].color : ''}`}
               />
-              <p className="text-sm">{logo.title}</p>
+              <p className="text-xs xl:text-sm">{logo.title}</p>
             </div>
           ))}
       </div>

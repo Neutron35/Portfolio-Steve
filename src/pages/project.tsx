@@ -4,6 +4,7 @@ import { projectsData } from '@/data/projectsData.tsx';
 import Banner from '@/components/banner.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import Collapse from '@/components/collapse.tsx';
 
 function Project() {
   const { projectId } = useParams();
@@ -71,7 +72,9 @@ function Project() {
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="size-fit rounded-[100px] border-t border-grey1 bg-black2 px-7 py-2">Problématiques</h3>
-                <p>{issues}</p>
+                {issues.map((issue, index) => (
+                  <Collapse key={index} title={issue.title} desc={issue.desc} solutions={issue.solutions} />
+                ))}
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="size-fit rounded-[100px] border-t border-grey1 bg-black2 px-7 py-2">Compétences</h3>
