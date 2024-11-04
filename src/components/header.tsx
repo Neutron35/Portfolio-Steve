@@ -7,8 +7,6 @@ import { Popover } from './ui/popover';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 import useScreenSize from '@/hooks/useScreenSize';
 
-//import Navbar from '../Navbar';
-
 function Header() {
   const screenSize = useScreenSize();
   const { tabletBP } = getTailwindBreakpoints();
@@ -16,12 +14,11 @@ function Header() {
   const [position, setPosition] = useState(window.scrollY);
   const [visible, setVisible] = useState(true);
 
-  // Gérer l'affichage du header en fonction du scroll
   useEffect(() => {
     const handleScroll = () => {
       const moving = window.scrollY;
 
-      setVisible(position > moving || moving < 50); // Rendre le header visible à la remontée ou proche du haut
+      setVisible(position > moving || moving < 50);
       setPosition(moving);
     };
 
@@ -30,8 +27,7 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [position]);
-
-  // Fermer le menu si l'écran est plus large que le breakpoint tablette
+  
   useEffect(() => {
     if (screenSize.width >= tabletBP && isOpen) {
       setIsOpen(false);

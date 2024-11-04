@@ -64,7 +64,6 @@ const FormItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivEl
   ({ className, ...props }, ref) => {
     const id = React.useId();
 
-    // Memoize the context value
     const contextValue = React.useMemo(() => ({ id }), [id]);
 
     return (

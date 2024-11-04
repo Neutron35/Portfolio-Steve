@@ -13,8 +13,7 @@ function Navbar({ visible }: navbarType) {
   const screenSize = useScreenSize();
   const { tabletBP } = getTailwindBreakpoints();
   const [isOpen, setIsOpen] = useState(false);
-
-  // Fermer le menu si l'écran est plus large que le breakpoint tablette
+  
   useEffect(() => {
     if (screenSize.width >= tabletBP && isOpen) {
       setIsOpen(false);
