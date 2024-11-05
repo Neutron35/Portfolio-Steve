@@ -21,7 +21,7 @@ function Skills({ content }: { content: SkillContent[] }) {
 
   return (
     <div className="flex flex-col gap-9">
-      <div className="mx-auto flex w-full flex-wrap justify-center gap-4 rounded-[24px] border-t bg-black2 p-8">
+      <div className="mx-auto flex w-full flex-wrap justify-center gap-4 rounded-[24px] border-t bg-black2 p-8 md:w-fit xl:w-full">
         {content
           .flatMap((skill) => skill.logos)
           .map((logo, index) => (
