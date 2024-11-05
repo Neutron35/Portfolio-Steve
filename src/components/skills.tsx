@@ -3,8 +3,9 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { SkillContent } from '@/types/section.types.ts';
 import { useState } from 'react';
+import { IconMapping } from '@/types/skills.types.ts';
 
-export const iconMapping = {
+export const iconMapping: IconMapping = {
   faHtml5: { icon: faHtml5, color: 'text-[#E44D26]' },
   faCss3: { icon: faCss3, color: 'text-[#264DE4]' },
   faJs: { icon: faJs, color: 'text-[#F7DF1E]' },
@@ -20,7 +21,7 @@ function Skills({ content }: { content: SkillContent[] }) {
 
   return (
     <div className="flex flex-col gap-9">
-      <div className="mx-auto flex w-fit gap-4 rounded-[24px] border-t bg-black2 p-8">
+      <div className="mx-auto flex w-full flex-wrap justify-center gap-4 rounded-[24px] border-t bg-black2 p-8">
         {content
           .flatMap((skill) => skill.logos)
           .map((logo, index) => (
@@ -32,9 +33,11 @@ function Skills({ content }: { content: SkillContent[] }) {
             >
               <FontAwesomeIcon
                 icon={iconMapping[logo.name].icon}
-                className={`text-5xl text-white transition-colors ${hoveredLogo === logo.name ? iconMapping[logo.name].color : ''}`}
+                className={`text-4xl transition-colors xl:text-5xl ${
+                  hoveredLogo === logo.name ? iconMapping[logo.name].color : 'text-white'
+                }`}
               />
-              <p className="text-sm">{logo.title}</p>
+              <p className="text-xs xl:text-sm">{logo.title}</p>
             </div>
           ))}
       </div>
@@ -42,7 +45,7 @@ function Skills({ content }: { content: SkillContent[] }) {
         {content.map((skill, index) => (
           <Card
             key={index}
-            className="flex w-full flex-col rounded-[24px] border-x-0 border-b-0 border-t border-t-white bg-black2 xl:mx-0"
+            className="flex w-full flex-col rounded-[24px] border-x-0 border-b-0 border-t bg-black2 xl:mx-0"
           >
             <CardHeader className="text-center">
               <CardTitle className="text-lg">{skill.title}</CardTitle>

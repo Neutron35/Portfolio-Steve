@@ -23,10 +23,7 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
   return (
     <section className="flex w-full flex-col items-center gap-5 pt-9 md:pt-24">
       {tag && (
-        <Badge
-          variant="default"
-          className="justify-center rounded-[100px] border-t-grey1 bg-black2 px-7 py-2.5 text-white"
-        >
+        <Badge variant="default" className="justify-center rounded-[100px] bg-black2 px-7 py-2.5 text-white">
           <h3>{tag}</h3>
         </Badge>
       )}

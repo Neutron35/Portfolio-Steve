@@ -27,7 +27,7 @@ function Header() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [position]);
-  
+
   useEffect(() => {
     if (screenSize.width >= tabletBP && isOpen) {
       setIsOpen(false);
@@ -42,7 +42,7 @@ function Header() {
     >
       <NavigationMenu className="mt-5 max-w-none *:w-full">
         <Popover open={isOpen} onOpenChange={setIsOpen}>
-          <NavigationMenuList className="justify-between rounded-[100px] border-t border-t-grey1 bg-black2 px-7 py-3.5">
+          <NavigationMenuList className="justify-between rounded-[100px] border-t bg-black2 px-7 py-3.5">
             <NavigationMenuItem className="py-2">
               <NavLink to="/" className="font-bold">
                 LIEURON

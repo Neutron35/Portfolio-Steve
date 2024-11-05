@@ -1,10 +1,10 @@
 import ProjectCard from './projectCard.tsx';
-import { galleryType } from '@/types/gallery.types';
+import { GalleryType } from '@/types/gallery.types.ts';
 
-function Gallery({ title, content }: galleryType) {
+function Gallery({ title, content }: GalleryType) {
   return (
     <section className="flex w-full flex-col items-center justify-between gap-9 rounded-[100px] border-t border-[#1B1B1B] px-4 pt-8 md:items-start md:px-8">
-      <h3 className="size-fit rounded-[100px] border-t border-grey1 bg-black2 px-7 py-2">{title}</h3>
+      <h3 className="size-fit rounded-[100px] border-t bg-black2 px-7 py-2">{title}</h3>
       <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
         {content.map((item) => (
           <ProjectCard key={item.id} content={item} />
