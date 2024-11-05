@@ -31,7 +31,7 @@ function Project() {
       <div className="flex flex-col gap-14 md:gap-24">
         <Banner title={title} content={context} allowNav={true} />
         <section className="flex flex-col gap-16">
-          <div className="h-[400px] w-full overflow-hidden rounded-[24px] md:h-[500px] xl:h-[800px]">
+          <div className="aspect-[39/38] w-full overflow-hidden rounded-[24px] md:aspect-[21/13] xl:aspect-[15/11]">
             {previewLink ? (
               <iframe
                 src={previewLink}
@@ -51,7 +51,7 @@ function Project() {
                   Role : <div className="tag">{role}</div>
                 </div>
                 <div className="flex items-center gap-3.5">
-                  Services :
+                  Détails :
                   <div className="flex gap-1">
                     {tags.map((tag, index) => (
                       <div key={index} className="tag">
@@ -72,7 +72,7 @@ function Project() {
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="size-fit rounded-[100px] border-t bg-black2 px-7 py-2">Problématiques</h3>
-                <div className="flex w-full flex-col gap-3 md:w-max xl:w-full">
+                <div className="flex w-full flex-col gap-3 md:max-w-max xl:w-full">
                   {issues.map((issue, index) => (
                     <Collapse key={index} title={issue.title} desc={issue.desc} solutions={issue.solutions} />
                   ))}
