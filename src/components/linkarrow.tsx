@@ -5,14 +5,15 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { linkarrowType } from '@/types/linkarrow.types';
 import { useState } from 'react';
 
-function Linkarrow({ linkto, text }: linkarrowType) {
+function LinkArrow({ linkto, text, className }: linkarrowType) {
   const [hover, setHover] = useState(false);
+
   return (
     <NavLink to={linkto}>
       <Button
+        className={`flex items-center gap-1.5 bg-transparent underline underline-offset-8 hover:bg-transparent hover:no-underline ${className}`}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
-        className="gap-1.5 bg-transparent underline underline-offset-8 hover:bg-transparent hover:no-underline"
       >
         {text}
         <FontAwesomeIcon icon={faArrowRight} className={`transition-transform ${hover && 'rotate-[-30deg]'}`} />
@@ -21,4 +22,4 @@ function Linkarrow({ linkto, text }: linkarrowType) {
   );
 }
 
-export default Linkarrow;
+export default LinkArrow;
