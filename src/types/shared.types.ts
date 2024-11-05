@@ -6,7 +6,7 @@ export interface ProjectBase {
   role: string;
   date: string;
   description: string;
-  issues: string[];
+  issues: { title: string; desc: string[]; solutions: string[] }[];
   skills: string[];
   githubLink?: string;
   previewLink?: string;
