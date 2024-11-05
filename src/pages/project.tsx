@@ -72,9 +72,11 @@ function Project() {
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="size-fit rounded-[100px] border-t bg-black2 px-7 py-2">Problématiques</h3>
-                {issues.map((issue, index) => (
-                  <Collapse key={index} title={issue.title} desc={issue.desc} solutions={issue.solutions} />
-                ))}
+                <div className="flex w-full flex-col gap-3 md:w-max xl:w-full">
+                  {issues.map((issue, index) => (
+                    <Collapse key={index} title={issue.title} desc={issue.desc} solutions={issue.solutions} />
+                  ))}
+                </div>
               </div>
               <div className="flex flex-col gap-4">
                 <h3 className="size-fit rounded-[100px] border-t bg-black2 px-7 py-2">Compétences</h3>
