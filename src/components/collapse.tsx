@@ -7,7 +7,7 @@ function Collapse({ title, desc, solutions }: CollapseProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="overflow-hidden">
+    <div className={`overflow-hidden rounded-[24px] ${isOpen && 'bg-black2'}`}>
       <div className="flex items-center justify-between rounded-[24px] bg-black2 px-7 py-2 text-base">
         <span>{title}</span>
         <FontAwesomeIcon
@@ -18,7 +18,9 @@ function Collapse({ title, desc, solutions }: CollapseProps) {
       </div>
       <div
         className={`flex origin-top flex-col gap-2 px-3 text-sm transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[500px] py-2 opacity-100' : 'max-h-0 overflow-hidden py-0 opacity-0'
+          isOpen
+            ? 'max-h-[500px] border-t-[3px] border-[#1B1B1B] py-3 opacity-100'
+            : 'max-h-0 overflow-hidden py-0 opacity-0'
         }`}
       >
         <ul className="flex flex-col gap-1 border-l-4 border-destructive px-4">
