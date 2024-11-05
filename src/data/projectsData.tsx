@@ -289,7 +289,11 @@ export const projectsData = [
     context: `Site de référencement et de notation de livres d'une petit chaîne de librairies`,
     role: `Développeur back-end`,
     date: `08.2024 - 09.2024`,
-    description: ``,
+    description: `"Mon Vieux Grimoire" est un site de notation de livres développé pour une chaîne de librairies lilloise.
+                  Les utilisateurs peuvent ajouter de nouveaux livres et leur attribuer des notes visibles publiquement.
+                  Mon objectif sur ce projet était de concevoir et de développer une API back-end robuste qui permet aux utilisateurs d'ajouter, modifier, supprimer ainsi que noter des livres. 
+                  L'API devait s'intégrer parfaitement avec le front-end conçu en React et garantir une expérience utilisateur fluide. 
+                  Pour répondre aux exigences du Green Code, l'API inclura aussi un système d'optimisation des images afin de réduire leur taille.`,
     issues: [
       {
         title: `Gestion des images`,
@@ -350,10 +354,12 @@ export const projectsData = [
     title: 'Qwenta',
     tags: ['Scrum', 'Notion', 'Kanban'],
     image: Qwenta,
-    context: ``,
+    context: `Site de création de menus personnalisés pour les restaurants`,
     role: `Product Owner`,
     date: `09.2024 - 10.2024`,
-    description: ``,
+    description: `Qwenta, un client de l’agence Webgencia, souhaite créer un site "Menu Maker" permettant aux restaurateurs de concevoir, organiser et mettre en page leurs menus en ligne facilement. 
+                  Ce site doit offrir des fonctionnalités pratiques pour la création et la personnalisation des menus, tout en restant intuitif et accessible.
+                  Chargé temporairement de la gestion du projet, mon objectif était de mettre en place un système de veille, définir les besoins techniques ainsi que leurs solutions, et permettre un meilleur suivi en établissant un tableau Kanban.`,
     issues: [],
     skills: [
       `Suivre le déroulement du projet grâce à un outil de gestion de projet`,
