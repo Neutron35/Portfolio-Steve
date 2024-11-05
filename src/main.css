@@ -164,6 +164,36 @@
     src: url('assets/fonts/inter-v18-latin-900italic.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+@keyframes appear {
+    0% {
+        transform: translate(0, 50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-animation {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-scroll {
+    animation: scroll-animation 0.7s cubic-bezier(0.44, 0, 0.56, 1) forwards;
+}
+
+.animate-appear {
+    animation: appear 0.8s cubic-bezier(0.44, 0, 0, 1) forwards;
+}
+
 @layer base {
     :root {
         @apply bg-black1 font-inter text-base font-normal text-white antialiased md:text-lg;
