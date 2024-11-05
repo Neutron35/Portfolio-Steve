@@ -1,14 +1,17 @@
 import { Badge } from './ui/badge';
-import Linkarrow from './linkarrow';
+import LinkArrow from './linkarrow';
 import { bannerType } from '@/types/banner.types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { useEffect, useRef, useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { projectsData } from '@/data/projectsData.tsx';
 
 function Banner({ title, content, tag, link, allowNav }: bannerType) {
   const { projectId } = useParams();
   const numericProjectId = projectId ? parseInt(projectId, 10) : undefined;
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
 
   const nextProject =
     numericProjectId !== undefined ? (numericProjectId === projectsData.length - 1 ? 0 : numericProjectId + 1) : 0;
@@ -20,6 +23,28 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
         : numericProjectId - 1
       : projectsData.length - 1;
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
+
   return (
     <section className="flex w-full flex-col items-center gap-5 pt-9 md:pt-24">
       {tag && (
@@ -28,7 +53,9 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
         </Badge>
       )}
       {allowNav ? (
-        <div className="flex w-full items-center justify-between px-7">
+        <div
+          className={`flex w-full items-center justify-between px-7 transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+        >
           <NavLink to={`/project/${prevProject}`} className="text-xl md:text-4xl xl:text-6xl">
             <FontAwesomeIcon icon={faArrowLeft} />
           </NavLink>
@@ -38,10 +65,19 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
           </NavLink>
         </div>
       ) : (
-        <h1>{title}</h1>
+        <h1
+          className={`transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+        >
+          {title}
+        </h1>
       )}
-      <p className="w-full text-center md:w-3/5">{content}</p>
-      {link && <Linkarrow linkto="/" text={link} />}
+      <p
+        ref={ref}
+        className={`w-full text-center transition-opacity delay-[400ms] duration-[800ms] md:w-3/5 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+      >
+        {content}
+      </p>
+      {link && <LinkArrow linkto="/" text={link} />}
     </section>
   );
 }
