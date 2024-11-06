@@ -19,7 +19,7 @@ export const iconMapping: IconMapping = {
 function Skills({ content }: { content: SkillContent[] }) {
   const [hoveredLogo, setHoveredLogo] = useState<string | null>(null);
 
-  const renderLogos = (logos: { name: string; title: string }[]) => (
+  const renderLogos = (logos: { name: string; title: string }[]) =>
     logos.map((logo, index) => (
       <div
         key={index}
@@ -35,13 +35,12 @@ function Skills({ content }: { content: SkillContent[] }) {
         />
         <p className="text-xs xl:text-sm">{logo.title}</p>
       </div>
-    ))
-  );
+    ));
 
   return (
     <div className="flex flex-col gap-9">
       <div className="mx-auto flex w-full flex-wrap justify-center gap-4 rounded-[24px] border-t bg-black2 p-8 md:w-fit xl:w-full">
-        {renderLogos(content.flatMap(skill => skill.logos))}
+        {renderLogos(content.flatMap((skill) => skill.logos))}
       </div>
       <div className="grid w-fit grid-cols-1 gap-9 xl:grid-cols-2 xl:items-stretch xl:justify-around">
         {content.map((skill, index) => (
@@ -49,7 +48,7 @@ function Skills({ content }: { content: SkillContent[] }) {
             key={index}
             className="flex w-full flex-col rounded-[24px] border-x-0 border-b-0 border-t bg-black2 xl:mx-0"
           >
-            <CardHeader className="text-center">
+            <CardHeader className="text-center text-white">
               <CardTitle className="text-lg">{skill.title}</CardTitle>
             </CardHeader>
             <CardContent className="mx-auto w-full text-sm text-white md:w-3/5 xl:w-fit">
