@@ -19,7 +19,9 @@ function Home() {
         ref={ref}
         className={`flex flex-col items-center gap-5 pt-[220px] md:pt-[321px] xl:pt-[288px] ${isVisible ? 'animate-scroll' : 'opacity-0'}`}
       >
-        <h1 className={`transition-opacity delay-[400ms] duration-700 ${animationClasses('')}`}>Steve LIEURON</h1>
+        <h2 className={`title1 transition-opacity delay-[400ms] duration-700 ${animationClasses('')}`}>
+          Steve LIEURON
+        </h2>
         <p className={`w-full text-center transition-opacity delay-[800ms] duration-[800ms] ${animationClasses('')}`}>
           Développeur web passionné, j'aime créer des expériences utilisateur intuitives et performantes. Formé aux
           technologies modernes et fort de projets concrets, je m'engage à concevoir des solutions élégantes et

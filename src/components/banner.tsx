@@ -22,7 +22,7 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
     <section className="flex w-full flex-col items-center gap-5 pt-9 md:pt-24">
       {tag && (
         <Badge variant="default" className="justify-center rounded-[100px] bg-black2 px-7 py-2.5 text-white">
-          <h3>{tag}</h3>
+          <div className="title3">{tag}</div>
         </Badge>
       )}
       {allowNav ? (
@@ -36,7 +36,7 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
           >
             <FontAwesomeIcon icon={faArrowLeft} />
           </NavLink>
-          <h1>{title}</h1>
+          <h2 className="title1">{title}</h2>
           <NavLink
             to={`/project/${nextProject}`}
             className="text-xl md:text-4xl xl:text-6xl"
@@ -46,11 +46,11 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
           </NavLink>
         </div>
       ) : (
-        <h1
-          className={`transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
+        <h2
+          className={`title1 transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
         >
           {title}
-        </h1>
+        </h2>
       )}
       <p
         ref={ref}

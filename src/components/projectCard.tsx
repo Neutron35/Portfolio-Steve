@@ -30,7 +30,7 @@ function ProjectCard({ content }: CardProps) {
         </div>
         <div className="flex items-start justify-center gap-2 px-5 md:items-end">
           <div className="flex w-full flex-col items-start gap-1">
-            <h2>{title}</h2>
+            <div className="title2">{title}</div>
             <div className="flex flex-col gap-1 md:flex-row">
               {tags.map((tag, index) => (
                 <Badge

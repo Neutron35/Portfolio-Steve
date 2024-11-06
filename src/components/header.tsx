@@ -44,7 +44,7 @@ function Header() {
           <div className="flex items-center justify-between rounded-[100px] border-t bg-black2 px-7 py-3.5">
             <div className="py-2">
               <NavLink to="/" className="font-bold">
-                LIEURON
+                <h1>LIEURON</h1>
               </NavLink>
             </div>
             <Navbar visible={visible} />
