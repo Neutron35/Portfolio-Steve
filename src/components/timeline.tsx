@@ -8,7 +8,7 @@ function Timeline({ content }: { content: TimelineItem[] }) {
           <div key={index} className="relative grid gap-1 text-sm">
             <div className="absolute left-1 top-1 z-10 aspect-square w-3 translate-x-[-33px] rounded-full bg-white md:left-0" />
             <div className="text-lg font-bold">{experience.title}</div>
-            <div className="text-gray-500 dark:text-gray-400">{experience.description}</div>
+            <div className="text-gray-400 dark:text-gray-400">{experience.description}</div>
           </div>
         ))}
       </div>
