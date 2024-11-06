@@ -10,11 +10,13 @@ function Collapse({ title, desc, solutions }: CollapseProps) {
 
   return (
     <div className={`overflow-hidden rounded-[24px] ${isOpen ? 'bg-black2' : ''}`}>
-      <div className="flex items-center justify-between rounded-[24px] bg-black2 px-7 py-2 text-base">
+      <div
+        className="flex cursor-pointer items-center justify-between rounded-[24px] bg-black2 px-7 py-2 text-base"
+        onClick={toggleCollapse}
+      >
         <span>{title}</span>
         <FontAwesomeIcon
           icon={faChevronDown}
-          onClick={toggleCollapse}
           className={`transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
         />
       </div>
