@@ -4,9 +4,9 @@ import pagesData from '@/data/pagesData';
 import { routerType } from '@/types/router.types';
 
 const Router = () => {
-  const pageRoutes = pagesData.map(({ path, title, element }: routerType) => {
-    return <Route key={title} path={`/${path}`} element={element} />;
-  });
+  const pageRoutes = pagesData.map(({ path, title, element }: routerType) => (
+    <Route key={title} path={`/${path}`} element={element} />
+  ));
 
   return <Routes>{pageRoutes}</Routes>;
 };
