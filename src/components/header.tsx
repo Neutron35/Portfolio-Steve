@@ -1,4 +1,3 @@
-import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from './ui/navigation-menu';
 import { useEffect, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
@@ -40,18 +39,18 @@ function Header() {
         visible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <NavigationMenu className="mt-5 max-w-none *:w-full">
+      <div className="mt-5 max-w-none *:w-full">
         <Popover open={isOpen} onOpenChange={setIsOpen}>
-          <NavigationMenuList className="justify-between rounded-[100px] border-t bg-black2 px-7 py-3.5">
-            <NavigationMenuItem className="py-2">
+          <div className="flex items-center justify-between rounded-[100px] border-t bg-black2 px-7 py-3.5">
+            <div className="py-2">
               <NavLink to="/" className="font-bold">
                 LIEURON
               </NavLink>
-            </NavigationMenuItem>
+            </div>
             <Navbar visible={visible} />
-          </NavigationMenuList>
+          </div>
         </Popover>
-      </NavigationMenu>
+      </div>
     </header>
   );
 }
