@@ -19,27 +19,29 @@ export const iconMapping: IconMapping = {
 function Skills({ content }: { content: SkillContent[] }) {
   const [hoveredLogo, setHoveredLogo] = useState<string | null>(null);
 
+  const renderLogos = (logos: { name: string; title: string }[]) => (
+    logos.map((logo, index) => (
+      <div
+        key={index}
+        onMouseEnter={() => setHoveredLogo(logo.name)}
+        onMouseLeave={() => setHoveredLogo(null)}
+        className="flex flex-col items-center"
+      >
+        <FontAwesomeIcon
+          icon={iconMapping[logo.name].icon}
+          className={`text-4xl transition-colors xl:text-5xl ${
+            hoveredLogo === logo.name ? iconMapping[logo.name].color : 'text-white'
+          }`}
+        />
+        <p className="text-xs xl:text-sm">{logo.title}</p>
+      </div>
+    ))
+  );
+
   return (
     <div className="flex flex-col gap-9">
       <div className="mx-auto flex w-full flex-wrap justify-center gap-4 rounded-[24px] border-t bg-black2 p-8 md:w-fit xl:w-full">
-        {content
-          .flatMap((skill) => skill.logos)
-          .map((logo, index) => (
-            <div
-              key={index}
-              onMouseEnter={() => setHoveredLogo(logo.name)}
-              onMouseLeave={() => setHoveredLogo(null)}
-              className="flex flex-col items-center"
-            >
-              <FontAwesomeIcon
-                icon={iconMapping[logo.name].icon}
-                className={`text-4xl transition-colors xl:text-5xl ${
-                  hoveredLogo === logo.name ? iconMapping[logo.name].color : 'text-white'
-                }`}
-              />
-              <p className="text-xs xl:text-sm">{logo.title}</p>
-            </div>
-          ))}
+        {renderLogos(content.flatMap(skill => skill.logos))}
       </div>
       <div className="grid w-fit grid-cols-1 gap-9 xl:grid-cols-2 xl:items-stretch xl:justify-around">
         {content.map((skill, index) => (
