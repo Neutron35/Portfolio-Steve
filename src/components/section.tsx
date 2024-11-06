@@ -5,9 +5,11 @@ import { ExperienceContent, SectionType, SkillsContent } from '@/types/section.t
 function Section({ section }: { section: SectionType }) {
   let content = <></>;
 
-  if (section.id === 'experience' && section.content.every((item) => 'description' in item)) {
+  const isValidContent = (item: any, key: string) => key in item;
+
+  if (section.id === 'experience' && section.content.every(item => isValidContent(item, 'description'))) {
     content = <Timeline content={section.content as ExperienceContent[]} />;
-  } else if (section.id === 'skills' && section.content.every((item) => 'text' in item)) {
+  } else if (section.id === 'skills' && section.content.every(item => isValidContent(item, 'text'))) {
     content = <Skills content={section.content as SkillsContent[]} />;
   }
 
