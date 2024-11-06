@@ -16,7 +16,7 @@ function LinkArrow({ linkto, text, className }: linkarrowType) {
         onMouseLeave={() => setHover(false)}
       >
         {text}
-        <FontAwesomeIcon icon={faArrowRight} className={`transition-transform ${hover && 'rotate-[-30deg]'}`} />
+        <FontAwesomeIcon icon={faArrowRight} className={`transition-transform ${hover ? 'rotate-[-30deg]' : ''}`} />
       </Button>
     </NavLink>
   );
