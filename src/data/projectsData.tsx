@@ -103,7 +103,7 @@ export const projectsData = [
         title: `Authentification`,
         desc: [
           `Mise en place d'un système d'authentification sécurisé`,
-          `gestion du token et des états connecté/déconnecté`,
+          `Gestion du token et des états connecté/déconnecté`,
         ],
         solutions: [
           `Implémentation d'un système de token stocké dans le localStorage`,
