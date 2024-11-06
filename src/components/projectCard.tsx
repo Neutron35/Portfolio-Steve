@@ -39,7 +39,7 @@ function ProjectCard({ content }: CardProps) {
               ))}
             </div>
           </div>
-          <Button className={buttonClass} arial-label={`Accéder au projet ${title}`}>
+          <Button className={buttonClass} aria-label={`Accéder au projet ${title}`}>
             <FontAwesomeIcon icon={faArrowRight} className={iconClass} />
           </Button>
         </div>
