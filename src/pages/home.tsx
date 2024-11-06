@@ -14,6 +14,7 @@ function Home() {
         src={imgSteve}
         className="animate-appear absolute inset-x-0 -z-10 m-auto w-[240px] overflow-hidden rounded-[16px] md:w-[360px]"
         alt="Portrait de Steve Lieuron"
+        fetchPriority="high"
       />
       <div
         ref={ref}
