@@ -286,4 +286,8 @@
             @apply bg-white text-black1;
         }
     }
+
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
 }
