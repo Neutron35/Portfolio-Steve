@@ -22,7 +22,11 @@ function ProjectCard({ content }: CardProps) {
         className="flex flex-col gap-3.5 rounded-[24px] bg-black2 pb-5"
       >
         <div className="h-[400px] w-full overflow-hidden rounded-[24px] md:h-[600px]">
-          <img src={image} alt={title} className={`transition-transform ${hoverClass}`} />
+          <img
+            src={image}
+            alt={`Aperçu scrollable de la page de ${title}`}
+            className={`transition-transform ${hoverClass}`}
+          />
         </div>
         <div className="flex items-start justify-center gap-2 px-5 md:items-end">
           <div className="flex w-full flex-col items-start gap-1">
