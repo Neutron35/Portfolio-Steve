@@ -29,11 +29,19 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
         <div
           className={`flex w-full items-center justify-between px-7 transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
         >
-          <NavLink to={`/project/${prevProject}`} className="text-xl md:text-4xl xl:text-6xl">
+          <NavLink
+            to={`/project/${prevProject}`}
+            className="text-xl md:text-4xl xl:text-6xl"
+            aria-label="Accéder au projet précédent"
+          >
             <FontAwesomeIcon icon={faArrowLeft} />
           </NavLink>
           <h1>{title}</h1>
-          <NavLink to={`/project/${nextProject}`} className="text-xl md:text-4xl xl:text-6xl">
+          <NavLink
+            to={`/project/${nextProject}`}
+            className="text-xl md:text-4xl xl:text-6xl"
+            aria-label="Accéder au projet suivant"
+          >
             <FontAwesomeIcon icon={faArrowRight} />
           </NavLink>
         </div>
