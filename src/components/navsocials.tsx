@@ -5,10 +5,10 @@ import { Link } from 'react-router-dom';
 function NavSocials() {
   return (
     <div className="flex justify-end gap-5">
-      {socialsData.map((social) => (
-        <NavigationMenuItem key={social.title} className="text-2xl">
-          <Link to={social.link} target="_blank">
-            {social.element}
+      {socialsData.map(({ title, link, element }) => (
+        <NavigationMenuItem key={title} className="text-2xl">
+          <Link to={link} target="_blank" rel="noopener noreferrer">
+            {element}
           </Link>
         </NavigationMenuItem>
       ))}
