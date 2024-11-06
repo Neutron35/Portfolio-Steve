@@ -25,7 +25,7 @@ function Navbar({ visible }: navbarType) {
     <div>
       <PopoverAnchor className="relative">
         <PopoverTrigger asChild className="md:hidden">
-          <Button className="bg-transparent hover:bg-transparent">
+          <Button className="bg-transparent hover:bg-transparent" aria-label="Menu de navigation entre les pages">
             <FontAwesomeIcon icon={faBars} className="text-lg" />
           </Button>
         </PopoverTrigger>
