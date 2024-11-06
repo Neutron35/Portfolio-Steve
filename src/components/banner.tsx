@@ -13,15 +13,8 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const nextProject =
-    numericProjectId !== undefined ? (numericProjectId === projectsData.length - 1 ? 0 : numericProjectId + 1) : 0;
-
-  const prevProject =
-    numericProjectId !== undefined
-      ? numericProjectId === 0
-        ? projectsData.length - 1
-        : numericProjectId - 1
-      : projectsData.length - 1;
+  const nextProject = (numericProjectId !== undefined) ? (numericProjectId + 1) % projectsData.length : 0;
+  const prevProject = (numericProjectId !== undefined) ? (numericProjectId - 1 + projectsData.length) % projectsData.length : projectsData.length - 1;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -53,9 +46,7 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
         </Badge>
       )}
       {allowNav ? (
-        <div
-          className={`flex w-full items-center justify-between px-7 transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
-        >
+        <div className={`flex w-full items-center justify-between px-7 transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
           <NavLink to={`/project/${prevProject}`} className="text-xl md:text-4xl xl:text-6xl">
             <FontAwesomeIcon icon={faArrowLeft} />
           </NavLink>
@@ -65,16 +56,11 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
           </NavLink>
         </div>
       ) : (
-        <h1
-          className={`transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
-        >
+        <h1 className={`transition-opacity delay-200 duration-[800ms] ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
           {title}
         </h1>
       )}
-      <p
-        ref={ref}
-        className={`w-full text-center transition-opacity delay-[400ms] duration-[800ms] md:w-3/5 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}
-      >
+      <p ref={ref} className={`w-full text-center transition-opacity delay-[400ms] duration-[800ms] md:w-3/5 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`}>
         {content}
       </p>
       {link && <LinkArrow linkto="/" text={link} />}
