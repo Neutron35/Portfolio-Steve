@@ -29,7 +29,7 @@ function Project() {
     <div className="flex flex-col gap-14 md:gap-24">
       <Banner title={title} content={context} allowNav={true} />
       <section className="flex flex-col gap-16">
-        <div className="no-scrollbar aspect-[15/11] w-full overflow-scroll rounded-[24px]">
+        <div className="no-scrollbar aspect-[39/38] w-full overflow-scroll rounded-[24px] md:aspect-[21/13] xl:aspect-[15/11]">
           <img src={image} alt={title} />
         </div>
         <div className="flex w-full flex-col items-center justify-between gap-16 xl:flex-row xl:items-start xl:gap-0">
@@ -43,7 +43,9 @@ function Project() {
                 Détails :
                 <div className="flex gap-1">
                   {tags.map((tag, index) => (
-                    <div key={index} className="tag">{tag}</div>
+                    <div key={index} className="tag">
+                      {tag}
+                    </div>
                   ))}
                 </div>
               </div>
