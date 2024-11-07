@@ -31,3 +31,12 @@ export type SectionType =
       title: string;
       content: SkillsContent[];
     };
+
+import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+
+export interface IconMapping {
+  [key: string]: {
+    icon: IconDefinition;
+    color: string;
+  };
+}
