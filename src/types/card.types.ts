@@ -6,5 +6,4 @@ export interface CardType extends ProjectBase {
 
 export interface CardProps {
   content: CardType;
-  fetchPriority?: 'high' | 'low' | undefined;
 }

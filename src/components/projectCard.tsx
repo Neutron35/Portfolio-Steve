@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CardProps } from '@/types/card.types.ts';
 
-function ProjectCard({ content, fetchPriority }: CardProps) {
+function ProjectCard({ content }: CardProps) {
   const [hover, setHover] = useState(false);
   const { id, title, tags, image } = content;
 
@@ -26,7 +26,6 @@ function ProjectCard({ content, fetchPriority }: CardProps) {
             src={image}
             alt={`Aperçu scrollable de la page de ${title}`}
             className={`transition-transform ${hoverClass}`}
-            fetchPriority={fetchPriority}
           />
         </div>
         <div className="flex items-start justify-center gap-2 px-5 md:items-end">
