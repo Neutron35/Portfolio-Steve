@@ -2,17 +2,22 @@ import { Badge } from './ui/badge';
 import { Button } from './ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
+import { memo, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { CardProps } from '@/types/card.types.ts';
 
-function ProjectCard({ content }: CardProps) {
+const ProjectCard = memo(({ content }: CardProps) => {
   const [hover, setHover] = useState(false);
   const { id, title, tags, image } = content;
 
-  const hoverClass = hover ? 'scale-[1.07]' : '';
-  const buttonClass = `transition-transform ${hover ? 'bg-white text-[#1c1c1c]' : ''} h-fit rounded-[100px] border px-3.5 py-1.5 hover:bg-white`;
-  const iconClass = `transition-transform ${hover ? 'rotate-[-30deg]' : ''}`;
+  const classes = useMemo(
+    () => ({
+      hoverClass: hover ? 'scale-[1.07]' : '',
+      buttonClass: `transition-transform ${hover ? 'bg-white text-[#1c1c1c]' : ''} h-fit rounded-[100px] border px-3.5 py-1.5 hover:bg-white`,
+      iconClass: `transition-transform ${hover ? 'rotate-[-30deg]' : ''}`,
+    }),
+    [hover]
+  );
 
   return (
     <NavLink to={`/project/${id}`}>
@@ -25,7 +30,7 @@ function ProjectCard({ content }: CardProps) {
           <img
             src={image}
             alt={`Aperçu scrollable de la page de ${title}`}
-            className={`transition-transform ${hoverClass}`}
+            className={`transition-transform ${classes.hoverClass}`}
           />
         </div>
         <div className="flex items-start justify-center gap-2 px-5 md:items-end">
@@ -43,13 +48,13 @@ function ProjectCard({ content }: CardProps) {
               ))}
             </div>
           </div>
-          <Button className={buttonClass} aria-label={`Accéder au projet ${title}`}>
-            <FontAwesomeIcon icon={faArrowRight} className={iconClass} />
+          <Button className={classes.buttonClass} aria-label={`Accéder au projet ${title}`}>
+            <FontAwesomeIcon icon={faArrowRight} className={classes.iconClass} />
           </Button>
         </div>
       </article>
     </NavLink>
   );
-}
+});
 
 export default ProjectCard;
