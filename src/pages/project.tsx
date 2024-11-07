@@ -5,8 +5,11 @@ import Banner from '@/components/banner.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Collapse from '@/components/collapse.tsx';
+import getTailwindBreakpoints from '@/lib/tailwindBreakpoints.ts';
 
 function Project() {
+  const { tabletBP } = getTailwindBreakpoints();
+
   const { projectId } = useParams();
   const navigate = useNavigate();
   const [idFound, setIdFound] = useState(false);
@@ -23,14 +26,22 @@ function Project() {
 
   if (!idFound || !projectData) return null;
 
-  const { title, tags, role, date, context, image, description, issues, skills, githubLink, previewLink } = projectData;
+  const { title, tags, role, date, context, images, description, issues, skills, githubLink, previewLink } =
+    projectData;
+
+  const { large, small } = images;
 
   return (
     <div className="flex flex-col gap-14 md:gap-24">
       <Banner title={title} content={context} allowNav={true} />
       <section className="flex flex-col gap-16">
         <div className="no-scrollbar aspect-[39/38] w-full overflow-scroll rounded-[24px] md:aspect-[21/13] xl:aspect-[15/11]">
-          <img src={image} alt={`Aperçu scrollable de la page de ${title}`} />
+          <img
+            src={small}
+            srcSet={`${large} 1200w, ${small} 720w`}
+            sizes={`(min-width: ${tabletBP}px) 1200px, 720px`}
+            alt={`Aperçu scrollable de la page de ${title}`}
+          />
         </div>
         <div className="flex w-full flex-col items-center justify-between gap-16 xl:flex-row xl:items-start xl:gap-0">
           <div className="flex w-full flex-col gap-5 xl:w-fit">

@@ -4,11 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { memo, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { CardProps } from '@/types/card.types.ts';
+import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
+import { ProjectBase } from '@/types/project.types.ts';
 
-const ProjectCard = memo(({ content }: CardProps) => {
+const ProjectCard = memo(({ content }: { content: ProjectBase }) => {
+  const { desktopBP, tabletBP } = getTailwindBreakpoints();
+
   const [hover, setHover] = useState(false);
-  const { id, title, tags, image } = content;
+  const { id, title, tags, images } = content;
+  const { large, small } = images;
 
   const classes = useMemo(
     () => ({
@@ -28,7 +32,9 @@ const ProjectCard = memo(({ content }: CardProps) => {
       >
         <div className="h-[400px] w-full overflow-hidden rounded-[24px] md:h-[600px]">
           <img
-            src={image}
+            src={small}
+            srcSet={`${large} 1200w, ${small} 720w`}
+            sizes={`(min-width: ${desktopBP}px) 500px, (min-width: ${tabletBP}px) 1130px, 690px`}
             alt={`Aperçu scrollable de la page de ${title}`}
             className={`transition-transform ${classes.hoverClass}`}
           />

@@ -1,9 +1,12 @@
-import imgSteve from '@/assets/images/photo-steve.webp';
+import imgSteveTablet from '@/assets/images/portrait-steve-360.webp';
+import imgSteveMobile from '@/assets/images/portrait-steve-240.webp';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';
 import LinkArrow from '@/components/linkarrow.tsx';
+import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 
 function Home() {
   const { ref, isVisible } = useIntersectionObserver();
+  const { tabletBP } = getTailwindBreakpoints();
 
   const animationClasses = (baseClass: string) =>
     `${baseClass} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`;
@@ -11,7 +14,12 @@ function Home() {
   return (
     <section className="w-full pt-9 md:pt-16">
       <img
-        src={imgSteve}
+        src={imgSteveMobile}
+        srcSet={`${imgSteveTablet} 360w, ${imgSteveMobile} 240w`}
+        sizes={`(min-width: ${tabletBP}px) 360px, 240px`}
+        width={240}
+        height={240}
+        loading="eager"
         className="animate-appear absolute inset-x-0 -z-10 m-auto w-[240px] overflow-hidden rounded-[16px] md:w-[360px]"
         alt="Portrait de Steve Lieuron"
       />
