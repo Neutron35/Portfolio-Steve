@@ -4,11 +4,13 @@ export type ExperienceContent = {
   projectsList: string[];
 };
 
-export type SkillLogo = {
-  name: 'faHtml5' | 'faCss3' | 'faJs' | 'faReact' | 'faSass' | 'faNodeJs' | 'faGit' | 'faGithub';
+export type IconName = 'faHtml5' | 'faCss3' | 'faJs' | 'faReact' | 'faSass' | 'faNodeJs' | 'faGit' | 'faGithub';
+
+export interface SkillLogo {
+  name: IconName;
   title: string;
   color: string;
-};
+}
 
 export type SkillContent = {
   title: string;
