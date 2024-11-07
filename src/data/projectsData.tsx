@@ -1,9 +1,15 @@
-import Bluel from '@/assets/images/Bluel.webp';
-import Booki from '@/assets/images/Booki.webp';
-import Carducci from '@/assets/images/Carducci.webp';
-import Kasa from '@/assets/images/Kasa.webp';
-import MVG from '@/assets/images/MVG.webp';
-import Qwenta from '@/assets/images/Qwenta.webp';
+import BookiLarge from '@/assets/images/Booki-1200.webp';
+import BookiSmall from '@/assets/images/Booki-720.webp';
+import BluelLarge from '@/assets/images/Bluel-1200.webp';
+import BluelSmall from '@/assets/images/Bluel-720.webp';
+import CarducciLarge from '@/assets/images/Carducci-1200.webp';
+import CarducciSmall from '@/assets/images/Carducci-720.webp';
+import KasaLarge from '@/assets/images/Kasa-1200.webp';
+import KasaSmall from '@/assets/images/Kasa-720.webp';
+import MVGLarge from '@/assets/images/MVG-1200.webp';
+import MVGSmall from '@/assets/images/MVG-720.webp';
+import QwentaLarge from '@/assets/images/Qwenta-1200.webp';
+import QwentaSmall from '@/assets/images/Qwenta-720.webp';
 
 export const bannerData = {
   title: 'Mes projets',
@@ -16,7 +22,7 @@ export const projectsData = [
     id: 0,
     title: 'Booki',
     tags: ['HTML', 'CSS'],
-    image: Booki,
+    images: { large: BookiLarge, small: BookiSmall },
     context: `Site Internet d'une agence de voyage, permettant aux usagers de trouver des hébergements et des activités dans la ville de leur choix.`,
     role: `Développeur Web`,
     date: `03.2024 - 04.2024`,
@@ -89,7 +95,7 @@ export const projectsData = [
     id: 1,
     title: 'Sophie Bluel',
     tags: ['JavaScript'],
-    image: Bluel,
+    images: { large: BluelLarge, small: BluelSmall },
     context: `Conception du site portfolio d'une architecte d'intérieur`,
     role: `Développeur front-end`,
     date: `04.2024 - 05.2024`,
@@ -164,7 +170,7 @@ export const projectsData = [
     id: 2,
     title: 'Nina Carducci',
     tags: ['Optimisation', 'Débug'],
-    image: Carducci,
+    images: { large: CarducciLarge, small: CarducciSmall },
     context: `Débogage et optimisation d'un site de photographe`,
     role: `Développeur Web`,
     date: `06.2024`,
@@ -214,7 +220,7 @@ export const projectsData = [
     id: 3,
     title: 'Kasa',
     tags: ['React', 'SASS'],
-    image: Kasa,
+    images: { large: KasaLarge, small: KasaSmall },
     context: `Refonte du site d'une entreprise de location d'appartements entre particuliers`,
     role: `Développeur front-end`,
     date: `07.2024 - 08.2024`,
@@ -285,7 +291,7 @@ export const projectsData = [
     id: 4,
     title: 'Mon Vieux Grimoire',
     tags: ['Node', 'Express', 'MongoDB'],
-    image: MVG,
+    images: { large: MVGLarge, small: MVGSmall },
     context: `Site de référencement et de notation de livres d'une petit chaîne de librairies`,
     role: `Développeur back-end`,
     date: `08.2024 - 09.2024`,
@@ -353,7 +359,7 @@ export const projectsData = [
     id: 5,
     title: 'Qwenta',
     tags: ['Scrum', 'Notion', 'Kanban'],
-    image: Qwenta,
+    images: { large: QwentaLarge, small: QwentaSmall },
     context: `Site de création de menus personnalisés pour les restaurants`,
     role: `Product Owner`,
     date: `09.2024 - 10.2024`,
