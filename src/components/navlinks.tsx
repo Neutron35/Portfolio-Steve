@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { NavigationMenuItem } from './ui/navigation-menu';
-import { navLinksType } from '@/types/navlinks.types';
+import { navLinksType } from '@/types/ui.types.ts';
 import pagesData from '@/data/pagesData';
 import { NavigationMenuList } from '@radix-ui/react-navigation-menu';
 

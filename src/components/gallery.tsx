@@ -1,5 +1,5 @@
 import ProjectCard from './projectCard.tsx';
-import { GalleryType } from '@/types/gallery.types.ts';
+import { GalleryType } from '@/types/project.types.ts';
 
 function Gallery({ title, content }: GalleryType) {
   return (

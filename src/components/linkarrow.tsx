@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NavLink } from 'react-router-dom';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
-import { linkarrowType } from '@/types/linkarrow.types';
+import { linkarrowType } from '@/types/ui.types.ts';
 import { useState } from 'react';
 
 function LinkArrow({ linkto, text, className }: linkarrowType) {

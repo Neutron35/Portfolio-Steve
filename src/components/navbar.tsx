@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import NavLinks from './navlinks';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
-import { navbarType } from '@/types/navbar.types';
+import { navbarType } from '@/types/ui.types.ts';
 import useScreenSize from '@/hooks/useScreenSize';
 import { NavigationMenu } from '@/components/ui/navigation-menu.tsx';
 

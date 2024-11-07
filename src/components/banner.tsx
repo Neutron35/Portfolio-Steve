@@ -1,6 +1,6 @@
 import { Badge } from './ui/badge';
 import LinkArrow from './linkarrow';
-import { bannerType } from '@/types/banner.types';
+import { bannerType } from '@/types/ui.types.ts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import useIntersectionObserver from '@/hooks/useIntersectionObserver';

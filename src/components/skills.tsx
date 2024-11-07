@@ -1,9 +1,8 @@
 import { faCss3, faGit, faGithub, faHtml5, faJs, faNodeJs, faReact, faSass } from '@fortawesome/free-brands-svg-icons';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { SkillContent } from '@/types/section.types.ts';
+import { IconMapping, SkillContent } from '@/types/section.types.ts';
 import { useState } from 'react';
-import { IconMapping } from '@/types/skills.types.ts';
 
 export const iconMapping: IconMapping = {
   faHtml5: { icon: faHtml5, color: 'text-[#E44D26]' },
