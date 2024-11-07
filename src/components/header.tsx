@@ -5,27 +5,14 @@ import Navbar from './navbar';
 import { Popover } from './ui/popover';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 import useScreenSize from '@/hooks/useScreenSize';
+import useScrollVisibility from '@/hooks/useScrollVisibility';
 
 function Header() {
   const screenSize = useScreenSize();
   const { tabletBP } = getTailwindBreakpoints();
   const [isOpen, setIsOpen] = useState(false);
-  const [position, setPosition] = useState(window.scrollY);
-  const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const moving = window.scrollY;
-
-      setVisible(position > moving || moving < 50);
-      setPosition(moving);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [position]);
+  const visible = useScrollVisibility();
 
   useEffect(() => {
     if (screenSize.width >= tabletBP && isOpen) {
