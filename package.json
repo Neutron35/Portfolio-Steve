@@ -37,7 +37,8 @@
     "react-router-dom": "^6.27.0",
     "tailwind-merge": "^2.5.4",
     "tailwindcss-animate": "^1.0.7",
-    "tailwindcss-animated": "^1.1.2"
+    "tailwindcss-animated": "^1.1.2",
+    "terser": "^5.36.0"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.3",
