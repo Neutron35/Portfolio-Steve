@@ -32,7 +32,7 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
           <NavLink
             to={`/project/${prevProject}`}
             className="text-xl md:text-4xl xl:text-6xl"
-            aria-label="Accéder au projet précédent"
+            aria-label={`Aller au projet précédent : ${projectsData[prevProject].title}`}
           >
             <FontAwesomeIcon icon={faArrowLeft} />
           </NavLink>
@@ -40,7 +40,7 @@ function Banner({ title, content, tag, link, allowNav }: bannerType) {
           <NavLink
             to={`/project/${nextProject}`}
             className="text-xl md:text-4xl xl:text-6xl"
-            aria-label="Accéder au projet suivant"
+            aria-label={`Aller au projet suivant : ${projectsData[nextProject].title}`}
           >
             <FontAwesomeIcon icon={faArrowRight} />
           </NavLink>
