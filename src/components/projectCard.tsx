@@ -20,7 +20,7 @@ const ProjectCard = memo(({ content }: { content: ProjectBase }) => {
       buttonClass: `transition-transform ${hover ? 'bg-white text-[#1c1c1c]' : ''} h-fit rounded-[100px] border px-3.5 py-1.5 hover:bg-white`,
       iconClass: `transition-transform ${hover ? 'rotate-[-30deg]' : ''}`,
     }),
-    [hover]
+    [hover],
   );
 
   return (
@@ -35,7 +35,7 @@ const ProjectCard = memo(({ content }: { content: ProjectBase }) => {
             src={small}
             srcSet={`${large} 1200w, ${small} 720w`}
             sizes={`(min-width: ${desktopBP}px) 500px, (min-width: ${tabletBP}px) 1130px, 690px`}
-            alt={`Aperçu scrollable de la page de ${title}`}
+            alt={`Aperçu de la page de ${title}`}
             className={`transition-transform ${classes.hoverClass}`}
           />
         </div>

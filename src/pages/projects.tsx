@@ -7,7 +7,7 @@ function Projects() {
   const { title: bannerTitle, content: bannerContent } = bannerData;
   const { title: galleryTitle, content: galleryContent } = galleryData;
   return (
-    <div className="flex flex-col gap-20 md:gap-24">
+    <div className="">
       <Banner title={bannerTitle} content={bannerContent} />
       <Gallery title={galleryTitle} content={galleryContent} />
     </div>

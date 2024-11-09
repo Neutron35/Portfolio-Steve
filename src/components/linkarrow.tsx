@@ -11,7 +11,7 @@ function LinkArrow({ linkto, text, className }: linkarrowType) {
   return (
     <NavLink to={linkto}>
       <Button
-        className={`flex items-center gap-1.5 bg-transparent underline underline-offset-8 hover:bg-transparent hover:no-underline ${className}`}
+        className={`mx-auto flex items-center gap-1.5 bg-transparent underline underline-offset-8 hover:bg-transparent hover:no-underline ${className}`}
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >
