@@ -2,20 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-    font-display: swap;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 100 900;
-    src: url('assets/fonts/inter-v18-latin-variable.woff2') format('woff2-variations');
-}
-
 @keyframes appear {
-    from { 
+    from {
         opacity: 0;
         will-change: opacity;
     }
-    to { 
+    to {
         opacity: 1;
         will-change: opacity;
     }
@@ -43,7 +35,8 @@
 
 @layer base {
     :root {
-        @apply bg-black1 font-inter text-base font-normal text-white antialiased md:text-lg;
+        @apply bg-black1 text-base font-normal text-white antialiased md:text-lg;
+        font-family: 'Inter Variable', sans-serif;
         --black1: 17 17 17;
         --black2: 28 28 28;
         --grey1: 255 255 255;
@@ -110,7 +103,7 @@
     }
 
     button {
-        @apply font-inter text-lg font-medium text-white;
+        @apply text-lg font-medium text-white;
     }
 
     /*

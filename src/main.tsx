@@ -1,3 +1,4 @@
+import '@fontsource-variable/inter';
 import './main.css';
 
 import App from './App';
@@ -12,6 +13,6 @@ if (rootElement) {
       <ThemeProvider>
         <App />
       </ThemeProvider>
-    </StrictMode>
+    </StrictMode>,
   );
 }
