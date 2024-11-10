@@ -5,8 +5,8 @@ import { NavigationMenu } from '@/components/ui/navigation-menu.tsx';
 
 function Footer() {
   return (
-    <footer className="flex w-full flex-col gap-5 pb-9">
-      <div className="flex max-w-none list-none flex-col items-center gap-6 xl:flex-row xl:justify-between xl:gap-0">
+    <footer className="min-h-[140px] w-full pb-9">
+      <div className="flex max-w-none list-none flex-col items-center gap-6 pb-5 xl:flex-row xl:justify-between xl:gap-0">
         <div>
           <NavLink to="/" className="font-bold">
             LIEURON
