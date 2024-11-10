@@ -6,6 +6,8 @@ import getTailwindBreakpoints from '@/lib/tailwindBreakpoints.ts';
 import Collapse from '@/components/collapse.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Helmet } from 'react-helmet-async';
+import { Badge } from '@/components/ui/badge.tsx'; // Assurez-vous que le composant Badge est importé correctement
 
 function Project() {
   const { tabletBP } = getTailwindBreakpoints();
@@ -33,6 +35,9 @@ function Project() {
 
   return (
     <div className="">
+      <Helmet>
+        <title>{title} - Portfolio Steve Lieuron</title>
+      </Helmet>
       <Banner title={title} content={context} allowNav={true} />
       <section className="mt-14 md:mt-24">
         <div className="h-[400px] w-full overflow-hidden rounded-[24px] md:h-[500px] xl:h-[800px]">
@@ -52,11 +57,15 @@ function Project() {
             </div>
             <div className="mt-3.5 w-fit">
               Détails :
-              <div className="inline-block">
+              <div className="ml-2.5 inline-block">
                 {tags.map((tag, index) => (
-                  <div key={index} className="tag ml-3.5 inline-block w-fit">
+                  <Badge
+                    variant="outline"
+                    key={index}
+                    className="alt-style ml-1 justify-center rounded-[100px] px-3.5 py-1.5 text-white"
+                  >
                     {tag}
-                  </div>
+                  </Badge>
                 ))}
               </div>
             </div>
@@ -91,7 +100,7 @@ function Project() {
             <ul className="mt-3.5 underline">
               {githubLink && (
                 <li>
-                  <Link to={githubLink} target="_blank">
+                  <Link to={githubLink} target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faGithub} className="mr-1" />
                     Code source
                   </Link>
@@ -99,7 +108,7 @@ function Project() {
               )}
               {previewLink && (
                 <li>
-                  <Link to={previewLink} target="_blank">
+                  <Link to={previewLink} target="_blank" rel="noopener noreferrer">
                     Prévisualisation
                   </Link>
                 </li>
