@@ -1,15 +1,15 @@
-import BookiLarge from '@/assets/images/Booki-1200.webp';
-import BookiSmall from '@/assets/images/Booki-720.webp';
-import BluelLarge from '@/assets/images/Bluel-1200.webp';
-import BluelSmall from '@/assets/images/Bluel-720.webp';
-import CarducciLarge from '@/assets/images/Carducci-1200.webp';
-import CarducciSmall from '@/assets/images/Carducci-720.webp';
-import KasaLarge from '@/assets/images/Kasa-1200.webp';
-import KasaSmall from '@/assets/images/Kasa-720.webp';
-import MVGLarge from '@/assets/images/MVG-1200.webp';
-import MVGSmall from '@/assets/images/MVG-720.webp';
-import QwentaLarge from '@/assets/images/Qwenta-1200.webp';
-import QwentaSmall from '@/assets/images/Qwenta-720.webp';
+import BookiLarge from '../assets/Booki-1200.webp';
+import BookiSmall from '../assets/Booki-720.webp';
+import BluelLarge from '../assets/Bluel-1200.webp';
+import BluelSmall from '../assets/Bluel-720.webp';
+import CarducciLarge from '../assets/Carducci-1200.webp';
+import CarducciSmall from '../assets/Carducci-720.webp';
+import KasaLarge from '../assets/Kasa-1200.webp';
+import KasaSmall from '../assets/Kasa-720.webp';
+import MVGLarge from '../assets/MVG-1200.webp';
+import MVGSmall from '../assets/MVG-720.webp';
+import QwentaLarge from '../assets/Qwenta-1200.webp';
+import QwentaSmall from '../assets/Qwenta-720.webp';
 
 export const bannerData = {
   title: 'Mes projets',
