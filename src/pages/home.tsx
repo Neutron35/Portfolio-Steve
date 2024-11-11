@@ -1,21 +1,22 @@
 import imgSteveTablet from '@/assets/portrait-steve-360.webp';
 import imgSteveMobile from '@/assets/portrait-steve-240.webp';
-import useIntersectionObserver from '@/hooks/useIntersectionObserver';
+import useIntersectionObserver from '@/hooks/useIntersectionObserver'; // Hook personnalisé pour observer l'intersection
 import LinkArrow from '@/components/linkarrow.tsx';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'; // Gestion du head du document
 
 function Home() {
-  const { ref, isVisible } = useIntersectionObserver();
-  const { tabletBP } = getTailwindBreakpoints();
+  const { ref, isVisible } = useIntersectionObserver(); // Utilisation du hook pour détecter la visibilité
+  const { tabletBP } = getTailwindBreakpoints(); // Obtention du breakpoint pour tablette
 
+  // Fonction pour appliquer les classes d'animation en fonction de la visibilité
   const animationClasses = (baseClass: string) =>
     `${baseClass} ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'}`;
 
   return (
     <section className="w-full pt-9 md:pt-16">
       <Helmet>
-        <title>Portfolio Steve Lieuron</title>
+        <title>Portfolio Steve Lieuron</title> {/* Titre de la page */}
       </Helmet>
       <img
         src={imgSteveMobile}

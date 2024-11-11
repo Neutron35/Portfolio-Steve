@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-
 import { NavLink } from 'react-router-dom';
 import Navbar from './navbar';
 import { Popover } from './ui/popover';
@@ -7,6 +6,7 @@ import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 import useScreenSize from '@/hooks/useScreenSize';
 import useScrollVisibility from '@/hooks/useScrollVisibility';
 
+// Composant Header affichant le logo et la barre de navigation avec gestion de la visibilité au scroll
 function Header() {
   const screenSize = useScreenSize();
   const { tabletBP } = getTailwindBreakpoints();
@@ -14,6 +14,7 @@ function Header() {
 
   const visible = useScrollVisibility();
 
+  // Ferme le menu si la taille de l'écran dépasse le breakpoint tablettes
   useEffect(() => {
     if (screenSize.width >= tabletBP && isOpen) {
       setIsOpen(false);
@@ -27,13 +28,16 @@ function Header() {
       }`}
     >
       <div className="mt-5 max-w-none *:w-full">
+        {/* Popover pour le menu de navigation mobile */}
         <Popover open={isOpen} onOpenChange={setIsOpen}>
           <div className="flex items-center justify-between rounded-[100px] border-t bg-black2 px-7 py-3.5">
             <div className="py-2">
+              {/* Logo avec lien vers la page d'accueil */}
               <NavLink to="/" className="font-bold">
                 <h1>LIEURON</h1>
               </NavLink>
             </div>
+            {/* Barre de navigation */}
             <Navbar visible={visible} />
           </div>
         </Popover>

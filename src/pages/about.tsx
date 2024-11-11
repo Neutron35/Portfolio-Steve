@@ -1,4 +1,4 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'; // Gestion du head du document
 import Banner from '@/components/banner.tsx';
 import { bannerData, sectionsData } from '@/data/aboutData.tsx';
 import AboutSection from '@/components/aboutSection.tsx';

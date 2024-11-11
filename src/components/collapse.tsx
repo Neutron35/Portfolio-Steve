@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { CollapseProps } from '@/types/ui.types.ts';
 
+// Composant Collapse affichant une section repliable avec titre et contenu
 function Collapse({ title, desc, solutions }: CollapseProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,11 +26,13 @@ function Collapse({ title, desc, solutions }: CollapseProps) {
           isOpen ? 'max-h-[500px] py-3 opacity-100' : 'max-h-0 overflow-hidden py-0 opacity-0'
         }`}
       >
+        {/* Liste des descriptions */}
         <ul className="flex flex-col gap-1 border-l-4 border-destructive px-4">
           {desc.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
         </ul>
+        {/* Liste des solutions */}
         <ul className="flex flex-col gap-1 border-l-4 border-green-500 px-4">
           {solutions.map((solution, index) => (
             <li key={index}>{solution}</li>
