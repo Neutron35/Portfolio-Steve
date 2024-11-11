@@ -6,7 +6,7 @@ import { NavigationMenu } from '@/components/ui/navigation-menu.tsx';
 // Composant Footer affichant les liens de navigation, les réseaux sociaux et les informations de création
 function Footer() {
   return (
-    <footer className="min-h-[140px] w-full pb-9">
+    <footer className="min-h-[140px] w-full pb-9 bg-black1">
       {/* Section principale avec liens de navigation et réseaux sociaux */}
       <div className="flex max-w-none list-none flex-col items-center gap-6 pb-5 xl:flex-row xl:justify-between xl:gap-0">
         <div>
