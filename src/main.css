@@ -115,12 +115,16 @@
         @apply text-center text-sm font-normal text-white;
     }
 
-    .tag {
+    .flat-tag {
         @apply rounded-[100px] border border-white px-3.5 py-2
     }
 
+    .relief-tag {
+        @apply rounded-[100px] border-t bg-black2 size-fit
+    }
+
     .nav-link {
-        @apply alt-style tag hover:bg-white hover:text-black1;
+        @apply alt-style flat-tag hover:bg-white hover:text-black1;
 
         &.active {
             @apply bg-white text-black1;
