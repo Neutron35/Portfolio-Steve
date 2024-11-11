@@ -8,9 +8,9 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollTop />
-      <div className="min-h-screen px-4 md:px-7 xl:mx-auto xl:max-w-[1153px]">
+      <div className="flex flex-col min-h-screen px-4 md:px-7 xl:mx-auto xl:max-w-[1153px]">
         <Header />
-        <main className="w-full pb-24">
+        <main className="flex-grow w-full pb-24">
           <Router />
         </main>
         <Footer />
