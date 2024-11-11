@@ -5,12 +5,14 @@ import { memo, useMemo, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import getTailwindBreakpoints from '@/lib/tailwindBreakpoints';
 import { ProjectBase } from '@/types/project.types.ts';
+import { Skeleton } from './ui/skeleton';
 
 // Composant ProjectCard affichant un aperçu d'un projet avec image, titre, tags et bouton de navigation
 const ProjectCard = memo(({ content }: { content: ProjectBase }) => {
   const { desktopBP, tabletBP } = getTailwindBreakpoints();
 
   const [hover, setHover] = useState(false);
+  const [isImageLoaded, setIsImageLoaded] = useState(false);
   const { id, title, tags, images } = content;
   const { large, small } = images;
 
@@ -33,12 +35,14 @@ const ProjectCard = memo(({ content }: { content: ProjectBase }) => {
       >
         {/* Image de prévisualisation du projet */}
         <div className="h-[400px] max-h-fit w-full overflow-hidden rounded-[24px] md:h-[600px]">
+          {!isImageLoaded && <Skeleton className="h-[400px] w-[690px] md:h-[600px] md:w-[500px] xl:w-[500px]" />}
           <img
             src={small}
             srcSet={`${large} 1200w, ${small} 720w`}
             sizes={`(min-width: ${desktopBP}px) 500px, (min-width: ${tabletBP}px) 1130px, 690px`}
             alt={`Aperçu de la page de ${title}`}
-            className={`size-auto transition-transform ${classes.hoverClass}`}
+            className={`size-auto transition-transform ${classes.hoverClass} ${isImageLoaded ? 'block' : 'hidden'}`}
+            onLoad={() => setIsImageLoaded(true)}
           />
         </div>
         {/* Informations du projet avec tags et bouton */}

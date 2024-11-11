@@ -7,6 +7,7 @@ import Collapse from '@/components/collapse.tsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Helmet } from 'react-helmet-async'; // Gestion du head du document
+import { Skeleton } from '@/components/ui/skeleton'; // Import du composant Skeleton
 
 function Project() {
   const { tabletBP } = getTailwindBreakpoints();
@@ -14,6 +15,7 @@ function Project() {
   const { projectId } = useParams(); // Récupération de l'ID du projet depuis l'URL
   const navigate = useNavigate(); // Hook pour naviguer programmaticalement
   const [idFound, setIdFound] = useState(false); // État pour vérifier si l'ID est trouvé
+  const [isImageLoaded, setIsImageLoaded] = useState(false); // État pour le chargement de l'image
 
   const numericProjectId = projectId ? parseInt(projectId, 10) : undefined; // Conversion de l'ID en nombre
   const projectData = projectsData.find((project) => project.id === numericProjectId); // Recherche des données du projet
@@ -40,12 +42,15 @@ function Project() {
       <Banner title={title} content={context} allowNav={true} />
       <section className="mt-14 md:mt-24">
         <div className="h-[400px] w-full overflow-hidden rounded-[24px] md:h-[500px] xl:h-[800px]">
+          {!isImageLoaded && <Skeleton className="h-[400px] w-[720px] md:h-[500px] md:w-[1200px] xl:h-[800px]" />}
+          {/* Skeleton affiché pendant le chargement */}
           <img
             src={small}
             srcSet={`${large} 1200w, ${small} 720w`} // Images responsives
             sizes={`(min-width: ${tabletBP}px) 1200px, 720px`}
             alt={`Aperçu de la page de ${title}`}
-            className="min-h-full"
+            className={`min-h-full transition-opacity duration-500 ${isImageLoaded ? 'opacity-100' : 'opacity-0'}`} // Transition pour l'apparition de l'image
+            onLoad={() => setIsImageLoaded(true)} // Met à jour l'état une fois l'image chargée
           />
         </div>
         <div className="mt-16 w-full">
