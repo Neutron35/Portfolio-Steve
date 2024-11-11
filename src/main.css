@@ -5,32 +5,30 @@
 @keyframes appear {
     from {
         opacity: 0;
-        will-change: opacity;
     }
     to {
         opacity: 1;
-        will-change: opacity;
     }
 }
 
 @keyframes scroll-animation {
-    0% {
+    from {
         opacity: 0;
-        transform: translateY(100px);
+        transform: translateY(20px);
     }
-    100% {
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 .animate-scroll {
-    animation: scroll-animation 0.7s cubic-bezier(0.44, 0, 0.56, 1) forwards;
+    animation: scroll-animation 0.5s ease-out forwards;
+    -webkit-animation: scroll-animation 0.5s ease-out forwards;
 }
 
 .animate-appear {
-    animation: appear 0.8s cubic-bezier(0.44, 0, 0, 1) forwards;
-    will-change: opacity;
+    animation: appear 0.5s ease-out forwards;
 }
 
 @layer base {
