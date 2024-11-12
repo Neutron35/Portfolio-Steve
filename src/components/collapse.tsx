@@ -27,7 +27,7 @@ function Collapse({ title, desc, solutions }: CollapseProps) {
         }`}
       >
         {/* Liste des descriptions */}
-        <ul className="flex flex-col gap-1 border-l-4 border-destructive px-4">
+        <ul className="flex flex-col gap-1 border-l-4 border-red-500 px-4">
           {desc.map((item, index) => (
             <li key={index}>{item}</li>
           ))}
