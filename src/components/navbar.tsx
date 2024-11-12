@@ -35,7 +35,7 @@ function Navbar({ visible }: navbarType) {
         <PopoverContent
           align="end"
           sideOffset={12}
-          className={`w-fit list-none items-center justify-center border-none bg-black2 text-center transition-transform duration-200 ${
+          className={`w-fit list-none items-center justify-center rounded-[24px] border-none bg-black2 text-center transition-transform duration-200 ${
             visible ? 'translate-y-0' : 'translate-y-[-200px]'
           }`}
         >
