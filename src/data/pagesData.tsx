@@ -3,6 +3,8 @@ import Home from '@/pages/home';
 import { Navigate } from 'react-router-dom';
 import NotFound from '@/pages/notfound';
 import Projects from '@/pages/projects';
+import Recipe from '@/pages/recipe';
+import Recipes from '@/pages/recipes';
 import { routerType } from '@/types/router.types';
 import Project from '@/pages/project.tsx';
 
@@ -26,6 +28,16 @@ const pagesData: routerType[] = [
     path: 'project/:projectId',
     element: <Project />,
     title: 'Projet',
+  },
+  {
+    path: 'recipes',
+    element: <Recipes />,
+    title: 'Recettes',
+  },
+  {
+    path: 'recipe/:recipeId',
+    element: <Recipe />,
+    title: 'Recette',
   },
   {
     path: 'notfound',
