@@ -7,6 +7,11 @@ import Recipe from '@/pages/recipe';
 import Recipes from '@/pages/recipes';
 import { routerType } from '@/types/router.types';
 import Project from '@/pages/project.tsx';
+import Sign from '@/pages/sign';
+import Account from '@/pages/account';
+import ManageAccount from '@/pages/manageAccount.tsx';
+import MyRecipes from '@/pages/myrecipes.tsx';
+import AddRecipe from '@/pages/addRecipe.tsx';
 
 const pagesData: routerType[] = [
   {
@@ -38,6 +43,31 @@ const pagesData: routerType[] = [
     path: 'recipe/:recipeId',
     element: <Recipe />,
     title: 'Recette',
+  },
+  {
+    path: 'sign',
+    element: <Sign />,
+    title: 'Sign',
+  },
+  {
+    path: 'account',
+    element: <Account />,
+    title: 'Account',
+  },
+  {
+    path: 'manageaccount',
+    element: <ManageAccount />,
+    title: 'ManageAccount',
+  },
+  {
+    path: 'myrecipes',
+    element: <MyRecipes />,
+    title: 'MyRecipes',
+  },
+  {
+    path: 'addrecipe',
+    element: <AddRecipe />,
+    title: 'AddRecipe',
   },
   {
     path: 'notfound',

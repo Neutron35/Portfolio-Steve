@@ -31,8 +31,8 @@ function Recipe() {
   const quantityOptions = numericRecipeId === 1
     ? [6, 12, 18, 24, 30]
     : numericRecipeId === 4
-      ? [...Array(15).keys()].map(num => (num + 1) * 2) // Options pour l'ID 4 : 2, 4, 6, ..., 30
-      : [...Array(10).keys()].map(num => num + 1); // Options par défaut : 1, 2, 3, ..., 10
+      ? [...Array(30).keys()].map(num => (num + 1) * 2) // Options pour l'ID 4 : 2, 4, 6, ..., 30
+      : [...Array(30).keys()].map(num => num + 1); // Options par défaut : 1, 2, 3, ..., 10
 
   // Calcul du facteur de multiplication pour la recette avec l'ID 1
   const multiplicationFactor = numericRecipeId === 1 ? selectedQuantity / 6 : selectedQuantity / portions;

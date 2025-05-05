@@ -5,7 +5,7 @@ import pagesData from '@/data/pagesData';
 import { NavigationMenuList } from '@radix-ui/react-navigation-menu';
 
 function NavLinks({ position }: navLinksType) {
-  const filteredPagesData = pagesData.slice(0, pagesData.length - 5);
+  const filteredPagesData = pagesData.slice(0, 3);
 
   const classNames: Record<string, string> = {
     top: 'hidden gap-1 md:flex',
