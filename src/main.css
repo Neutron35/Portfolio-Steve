@@ -85,6 +85,10 @@
         }
     }
 
+    .input {
+        @apply bg-black2 border border-white text-white;
+    }
+
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }

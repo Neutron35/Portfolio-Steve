@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
+import { useSession } from '@/lib/sessionContext';
 
 export default function Avatar({ url, size, onUpload }) {
   const [avatarUrl, setAvatarUrl] = useState(null);
   const [uploading, setUploading] = useState(false);
+  const { session } = useSession();
+  const userId = session?.user.id;
 
   useEffect(() => {
     if (url) downloadImage(url);
@@ -35,10 +38,28 @@ export default function Avatar({ url, size, onUpload }) {
       const fileName = `${Math.random()}.${fileExt}`;
       const filePath = `${fileName}`;
 
+      // Supprimer l'ancien avatar si un chemin d'avatar existant est fourni
+      if (url) {
+        const { error: deleteError } = await supabase.storage.from('avatars').remove([url]);
+        if (deleteError) {
+          console.error('Erreur lors de la suppression de l\'ancien avatar :', deleteError.message);
+        }
+      }
+
       const { error: uploadError } = await supabase.storage.from('avatars').upload(filePath, file);
 
       if (uploadError) {
         throw uploadError;
+      }
+
+      // Mettre à jour l'URL de l'avatar dans la table profiles
+      const { error: updateError } = await supabase
+        .from('profiles')
+        .update({ avatar_url: filePath })
+        .eq('id', userId);
+
+      if (updateError) {
+        throw updateError;
       }
 
       onUpload(event, filePath);
@@ -56,7 +77,7 @@ export default function Avatar({ url, size, onUpload }) {
           src={avatarUrl}
           alt="Avatar"
           style={{ height: size, width: size }}
-          className="mx-auto"
+          className="mx-auto object-cover"
         />
       ) : (
         <div style={{ height: size, width: size }} />

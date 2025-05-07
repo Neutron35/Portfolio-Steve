@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { NavLink } from 'react-router-dom';
 import Banner from '@/components/banner.tsx';
-import Avatar from '@/components/avatar.tsx';
 
 export default function ManageAccount() {
   const { session } = useSession();
@@ -98,13 +97,15 @@ export default function ManageAccount() {
       <Banner title="Informations" />
       <form onSubmit={updateProfile} className="mx-auto mt-7 w-1/3 text-center md:mt-12">
         <div className="grid grid-cols-4 gap-3.5">
-          <Avatar
+          {/*
+            <Avatar
             url={avatar_url}
             size={150}
             onUpload={(event, url) => {
               updateProfile(event, url);
             }}
           />
+          */}
           <label htmlFor="email" className="text-right">Email</label>
           <input id="email" type="text" value={session?.user?.email || ''} disabled
                  className="col-span-3 ml-2 rounded-xl border border-white bg-transparent py-0.5 pl-2" />
