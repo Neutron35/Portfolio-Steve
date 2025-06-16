@@ -80,7 +80,7 @@
     .nav-link {
         @apply alt-style flat-tag hover:bg-white hover:text-black1;
 
-        &.active {
+        &.active-class {
             @apply bg-white text-black1;
         }
     }
